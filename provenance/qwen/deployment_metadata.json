@@ -1,0 +1,583 @@
+{
+  "models": {
+    "Qwen3.8-27B": {
+      "path": "/data/houwanlong/cpm_qwen_20261115/models/Qwen3.8-27B",
+      "source_path": "/data/zhanchen/models/Qwen3.8-27B",
+      "config": {
+        "architectures": [
+          "Qwen3_5ForConditionalGeneration"
+        ],
+        "image_token_id": 248056,
+        "language_model_only": false,
+        "model_type": "qwen3_5",
+        "text_config": {
+          "attention_bias": false,
+          "attention_dropout": 0.0,
+          "attn_output_gate": true,
+          "bos_token_id": 248044,
+          "dtype": "bfloat16",
+          "eos_token_id": 248044,
+          "full_attention_interval": 4,
+          "head_dim": 256,
+          "hidden_act": "silu",
+          "hidden_size": 5120,
+          "initializer_range": 0.02,
+          "intermediate_size": 17408,
+          "layer_types": [
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention"
+          ],
+          "linear_conv_kernel_dim": 4,
+          "linear_key_head_dim": 128,
+          "linear_num_key_heads": 16,
+          "linear_num_value_heads": 48,
+          "linear_value_head_dim": 128,
+          "mamba_ssm_dtype": "float32",
+          "max_position_embeddings": 262144,
+          "model_type": "qwen3_5_text",
+          "mtp_num_hidden_layers": 1,
+          "mtp_use_dedicated_embeddings": false,
+          "num_attention_heads": 24,
+          "num_hidden_layers": 64,
+          "num_key_value_heads": 4,
+          "output_gate_type": "swish",
+          "pad_token_id": null,
+          "partial_rotary_factor": 0.25,
+          "rms_norm_eps": 1e-06,
+          "rope_parameters": {
+            "mrope_interleaved": true,
+            "mrope_section": [
+              11,
+              11,
+              10
+            ],
+            "partial_rotary_factor": 0.25,
+            "rope_theta": 10000000,
+            "rope_type": "default"
+          },
+          "tie_word_embeddings": false,
+          "use_cache": true,
+          "vocab_size": 248320
+        },
+        "tie_word_embeddings": false,
+        "transformers_version": "5.8.0.dev0",
+        "video_token_id": 248057,
+        "vision_config": {
+          "deepstack_visual_indexes": [],
+          "depth": 27,
+          "hidden_act": "gelu_pytorch_tanh",
+          "hidden_size": 1152,
+          "in_channels": 3,
+          "initializer_range": 0.02,
+          "intermediate_size": 4304,
+          "model_type": "qwen3_5",
+          "num_heads": 16,
+          "num_position_embeddings": 2304,
+          "out_hidden_size": 5120,
+          "patch_size": 16,
+          "spatial_merge_size": 2,
+          "temporal_patch_size": 2
+        },
+        "vision_end_token_id": 248054,
+        "vision_start_token_id": 248053
+      },
+      "files": {
+        "chat_template.jinja": {
+          "bytes": 8952,
+          "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+        },
+        "config.json": {
+          "bytes": 4312,
+          "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+        },
+        "configuration.json": {
+          "bytes": 29,
+          "sha256": "8fa209ef18ac53dea0c47cf8d6f4e92c907565a4971bee413c1772e314a251fa"
+        },
+        "generation_config.json": {
+          "bytes": 202,
+          "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+        },
+        "model-00001-of-00018.safetensors": {
+          "bytes": 3966730552,
+          "sha256": "ba0ce20aae489ad196733da5064bcdf159a1fe84f53336648196e1ebb7751b1c"
+        },
+        "model-00002-of-00018.safetensors": {
+          "bytes": 3043080328,
+          "sha256": "06a148c01bfbe3faa14a5f184a7ff29a706f7ae1c8b2705d2058e26d17a001fb"
+        },
+        "model-00003-of-00018.safetensors": {
+          "bytes": 2542796952,
+          "sha256": "2e1bf62cbcd406eaa64b60d10353e1f0ef4039d0976e56f05cabe953454f9968"
+        },
+        "model-00004-of-00018.safetensors": {
+          "bytes": 3988973152,
+          "sha256": "511e34063187882659753c4d93f3859f93c019fd438d8813071921c81d9a3f1a"
+        },
+        "model-00005-of-00018.safetensors": {
+          "bytes": 2099339864,
+          "sha256": "635cb53446dc74f219740fc59e18b774f877b803b9722e289ca62575a6efa701"
+        },
+        "model-00006-of-00018.safetensors": {
+          "bytes": 3979553696,
+          "sha256": "0bc5214fac607f0e6cc92eec3789d4b8559410ef9fce66621ba8158e8410dae0"
+        },
+        "model-00007-of-00018.safetensors": {
+          "bytes": 2108759344,
+          "sha256": "80b0c49033e9a0d5762562aa12f4acdb7f54da586f3d0110f28c48d91cf07892"
+        },
+        "model-00008-of-00018.safetensors": {
+          "bytes": 3979553696,
+          "sha256": "7192c5b66185d3592927daabee1cc19e6f6e0ce75988ee20e824b624765fda79"
+        },
+        "model-00009-of-00018.safetensors": {
+          "bytes": 2108759344,
+          "sha256": "af3c48cc37af44f3db6ae0579baf019180d48d9c527caa0a1f03ff85813a56d8"
+        },
+        "model-00010-of-00018.safetensors": {
+          "bytes": 3979553696,
+          "sha256": "163490a76f3bea3a40855b7efc04ce6d27afaf1a34f0bbde495b9491f76457c9"
+        },
+        "model-00011-of-00018.safetensors": {
+          "bytes": 2108759344,
+          "sha256": "5f3ae1b948aeee39da77aec558e8236cd65fe4d7cb7686a76bb007acc563c6d8"
+        },
+        "model-00012-of-00018.safetensors": {
+          "bytes": 3979553696,
+          "sha256": "a3de1c7114677a8f5ac5c4892c90e8238ea5c1e2038c80e757dfc87c3902ca55"
+        },
+        "model-00013-of-00018.safetensors": {
+          "bytes": 2108759344,
+          "sha256": "06ab79a41f74c9c5cb734816feb0c7fc364104b227165ee7391231e1155aa02a"
+        },
+        "model-00014-of-00018.safetensors": {
+          "bytes": 3979553696,
+          "sha256": "4138ed94603065ba884bbcadedb04d7718bb40117e85e6f5c6fc5b9c05b7a85b"
+        },
+        "model-00015-of-00018.safetensors": {
+          "bytes": 2108759344,
+          "sha256": "69224e27b9de4e7dbf6fc936c6eaae08447bda3b80a6c31a871ab451173afd22"
+        },
+        "model-00016-of-00018.safetensors": {
+          "bytes": 3979564040,
+          "sha256": "73cb9a1089fb6155cb648609478d6633be8a5c7d9ca5a05bc8925ce8a553cefe"
+        },
+        "model-00017-of-00018.safetensors": {
+          "bytes": 2108759344,
+          "sha256": "beb51f01056142ac4984bd800507b0dd0fd18de57f8e9ef6ea41d1a3598983a8"
+        },
+        "model-00018-of-00018.safetensors": {
+          "bytes": 3392197344,
+          "sha256": "1d3479509e21494658f9b64d317f5ea8e55c4025d28c702d6c4d0b356ce8ea06"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 112216,
+          "sha256": "77042094076611b69791a610065f28b7013b8c621795fa86ddccc8bac7d1b9df"
+        },
+        "preprocessor_config.json": {
+          "bytes": 390,
+          "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+        },
+        "tokenizer.json": {
+          "bytes": 12809320,
+          "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+        },
+        "tokenizer_config.json": {
+          "bytes": 17928,
+          "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+        },
+        "video_preprocessor_config.json": {
+          "bytes": 385,
+          "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+        },
+        "vocab.json": {
+          "bytes": 6722759,
+          "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+        }
+      }
+    },
+    "Qwen3.5-9B": {
+      "path": "/data/houwanlong/cpm_qwen_20261115/models/Qwen3.5-9B",
+      "source_path": "/data/zhanchen/models/Qwen3.5-9B",
+      "config": {
+        "architectures": [
+          "Qwen3_5ForConditionalGeneration"
+        ],
+        "image_token_id": 248056,
+        "model_type": "qwen3_5",
+        "text_config": {
+          "attention_bias": false,
+          "attention_dropout": 0.0,
+          "attn_output_gate": true,
+          "dtype": "bfloat16",
+          "eos_token_id": 248044,
+          "full_attention_interval": 4,
+          "head_dim": 256,
+          "hidden_act": "silu",
+          "hidden_size": 4096,
+          "initializer_range": 0.02,
+          "intermediate_size": 12288,
+          "layer_types": [
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention",
+            "linear_attention",
+            "linear_attention",
+            "linear_attention",
+            "full_attention"
+          ],
+          "linear_conv_kernel_dim": 4,
+          "linear_key_head_dim": 128,
+          "linear_num_key_heads": 16,
+          "linear_num_value_heads": 32,
+          "linear_value_head_dim": 128,
+          "max_position_embeddings": 262144,
+          "mlp_only_layers": [],
+          "model_type": "qwen3_5_text",
+          "mtp_num_hidden_layers": 1,
+          "mtp_use_dedicated_embeddings": false,
+          "num_attention_heads": 16,
+          "num_hidden_layers": 32,
+          "num_key_value_heads": 4,
+          "rms_norm_eps": 1e-06,
+          "use_cache": true,
+          "vocab_size": 248320,
+          "mamba_ssm_dtype": "float32",
+          "rope_parameters": {
+            "mrope_interleaved": true,
+            "mrope_section": [
+              11,
+              11,
+              10
+            ],
+            "rope_type": "default",
+            "rope_theta": 10000000,
+            "partial_rotary_factor": 0.25
+          }
+        },
+        "tie_word_embeddings": false,
+        "transformers_version": "4.57.0.dev0",
+        "video_token_id": 248057,
+        "vision_config": {
+          "deepstack_visual_indexes": [],
+          "depth": 27,
+          "hidden_act": "gelu_pytorch_tanh",
+          "hidden_size": 1152,
+          "in_channels": 3,
+          "initializer_range": 0.02,
+          "intermediate_size": 4304,
+          "model_type": "qwen3_5",
+          "num_heads": 16,
+          "num_position_embeddings": 2304,
+          "out_hidden_size": 4096,
+          "patch_size": 16,
+          "spatial_merge_size": 2,
+          "temporal_patch_size": 2
+        },
+        "vision_end_token_id": 248054,
+        "vision_start_token_id": 248053
+      },
+      "files": {
+        "chat_template.jinja": {
+          "bytes": 7756,
+          "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+        },
+        "config.json": {
+          "bytes": 3126,
+          "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+        },
+        "configuration.json": {
+          "bytes": 51,
+          "sha256": "2d4464e2ead06bc9bc718c781309ad1e7baded626d66e8dcdc8b469ba185faf0"
+        },
+        "model.safetensors-00001-of-00004.safetensors": {
+          "bytes": 5276436216,
+          "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+        },
+        "model.safetensors-00002-of-00004.safetensors": {
+          "bytes": 5335161512,
+          "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+        },
+        "model.safetensors-00003-of-00004.safetensors": {
+          "bytes": 5368717440,
+          "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+        },
+        "model.safetensors-00004-of-00004.safetensors": {
+          "bytes": 3325995712,
+          "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 79657,
+          "sha256": "26d3539b516be613f39563617cb9d33b3f83d401298125be392c80cefb8f7fe5"
+        },
+        "preprocessor_config.json": {
+          "bytes": 390,
+          "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+        },
+        "tokenizer.json": {
+          "bytes": 12807982,
+          "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+        },
+        "tokenizer_config.json": {
+          "bytes": 16710,
+          "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+        },
+        "video_preprocessor_config.json": {
+          "bytes": 385,
+          "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+        },
+        "vocab.json": {
+          "bytes": 6722759,
+          "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+        }
+      }
+    }
+  },
+  "packages": {
+    "torch": "2.10.0",
+    "vllm": "0.19.1",
+    "transformers": "5.20.1"
+  },
+  "hardware": "NVIDIA A100-SXM4-80GB",
+  "dtype": "bfloat16",
+  "max_model_len": 65536,
+  "seed": 20261022,
+  "enable_thinking": false,
+  "tool_parser": "qwen3_coder",
+  "source_directory_alias_identity": true,
+  "prefix_cache_switches": {
+    "27": {
+      "eval_pid": 522897,
+      "old_server_pid": 497715,
+      "port": 18227,
+      "switch": "prefix_cache_off_to_on",
+      "pause_epoch": 1794725159.60161,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39550           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39444           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39866           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39172           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39210           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39764           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39276           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39592           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39854           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39810           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39674           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39724           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39292           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39830           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39524           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39732           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39796           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39734           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39402           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39780           \n",
+      "drained_epoch": 1794725189.7412214,
+      "new_server_pid": 561748,
+      "ready_epoch": 1794725231.8122134,
+      "resume_epoch": 1794725231.8122685
+    },
+    "9": {
+      "eval_pid": 522898,
+      "old_server_pid": 497716,
+      "port": 18209,
+      "switch": "prefix_cache_off_to_on",
+      "pause_epoch": 1794725307.459288,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:58752           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:59414           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:59280           \n",
+      "drained_epoch": 1794725563.2998827,
+      "new_server_pid": 577449,
+      "ready_epoch": 1794725599.370147,
+      "resume_epoch": 1794725599.3702142
+    }
+  },
+  "inference_z3_version": "5.4.1.0 (code/deps; isolated from vLLM server)",
+  "server_scripts_sha256": {
+    "serve27.sh": "886cfacdc4c01130021accb9a3a035d5a597b6ef1d9e50d7b041f457173334f4",
+    "serve9.sh": "b1a9789953f0fa4d2f9073b52d6b2b96d4b2b866f4f1e4b5c79a5c1d6d799aa0",
+    "serve27_before_cache.sh": "47b7062687e6e187b9f741a42cf733df2940663641905cbe59bb805719af2d0f",
+    "serve9_before_cache.sh": "314ea63892e24b6f68d36c42b1dd3944997394ec6be198b95259e7d17b52fbe9"
+  },
+  "service_configuration_changes": [
+    {
+      "eval_pid": 522897,
+      "old_server_pid": 497715,
+      "port": 18227,
+      "switch": "prefix_cache_off_to_on",
+      "pause_epoch": 1794725159.60161,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39550           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39444           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39866           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39172           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39210           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39764           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39276           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39592           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39854           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39810           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39674           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39724           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39292           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39830           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39524           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39732           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39796           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39734           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39402           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39780           \n",
+      "drained_epoch": 1794725189.7412214,
+      "new_server_pid": 561748,
+      "ready_epoch": 1794725231.8122134,
+      "resume_epoch": 1794725231.8122685
+    },
+    {
+      "eval_pid": 522898,
+      "old_server_pid": 497716,
+      "port": 18209,
+      "switch": "prefix_cache_off_to_on",
+      "pause_epoch": 1794725307.459288,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:58752           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:59414           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:59280           \n",
+      "drained_epoch": 1794725563.2998827,
+      "new_server_pid": 577449,
+      "ready_epoch": 1794725599.370147,
+      "resume_epoch": 1794725599.3702142
+    },
+    {
+      "eval_pid": 522897,
+      "old_server_pid": 561748,
+      "port": 18227,
+      "switch": "max_num_seqs_24_to_8",
+      "pause_epoch": 1794725994.0974603,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:47544           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:46614           \n",
+      "drained_epoch": 1794726480.630061,
+      "new_server_pid": 615544,
+      "ready_epoch": 1794726526.7066941,
+      "resume_epoch": 1794726526.7067506
+    },
+    {
+      "eval_pid": 522897,
+      "old_server_pid": 615544,
+      "port": 18227,
+      "switch": "tensor_parallel_1_to_2_gpu0_gpu2_memory_fraction_055",
+      "pause_epoch": 1794726910.3063438,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:53294           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:52588           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:52946           \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:53086           \n",
+      "drained_epoch": 1794727291.4859238,
+      "new_server_pid": 648254,
+      "ready_epoch": 1794727433.665924,
+      "resume_epoch": 1794727433.6659799
+    },
+    {
+      "eval_pid": 522897,
+      "old_server_pid": 648254,
+      "port": 18227,
+      "switch": "eager_to_full_decode_only",
+      "capture_size": 8,
+      "pause_epoch": 1794728256.1593585,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "compilation_mode": 0,
+      "prefill_still_eager": true,
+      "memory_note": "Small decode capture batches only; before switch >9 GiB physical free on GPU3 and >26 GiB on GPUs0/2. Existing memory fractions unchanged; measured graph allocation logged by vLLM.",
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18227      127.0.0.1:39184           \n",
+      "drained_epoch": 1794728637.3392057,
+      "new_server_pid": 702024,
+      "ready_epoch": 1794728692.4432967,
+      "resume_epoch": 1794728692.4433746
+    },
+    {
+      "eval_pid": 522898,
+      "old_server_pid": 577449,
+      "port": 18209,
+      "switch": "eager_to_full_decode_only",
+      "capture_size": 24,
+      "pause_epoch": 1794728742.981988,
+      "no_replay": true,
+      "same_model_dtype_decoding_context_budget": true,
+      "compilation_mode": 0,
+      "prefill_still_eager": true,
+      "memory_note": "Small decode capture batches only; before switch >9 GiB physical free on GPU3 and >26 GiB on GPUs0/2. Existing memory fractions unchanged; measured graph allocation logged by vLLM.",
+      "tcp_queues_before_stop": "State       Recv-Q  Send-Q   Local Address:Port    Peer Address:Port   Process  \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:34576           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:33934           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:34600           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:33968           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:34410           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:33858           \nFIN-WAIT-2  0       0            127.0.0.1:18209      127.0.0.1:34626           \n",
+      "drained_epoch": 1794728993.765375,
+      "new_server_pid": 717053,
+      "ready_epoch": 1794729034.8389225,
+      "resume_epoch": 1794729034.8389754
+    }
+  ],
+  "latency_comparison": "Not used: logged drain/restart pauses are included in raw phase wall times.",
+  "shared_public_input_patch": "Both matched arms use the same frozen runtime with public reference_locator copied into public claims when present. This is not an exact recreation of the manuscript unpatched input interface; external manuscript aggregates remain separately identified.",
+  "final_service_scripts_sha256": {
+    "serve27.sh": "cde8279b217862a53b26e8a660a695039a1350221b76eacfcf96006b8ee05187",
+    "serve9.sh": "29961b68b8d087cd4fee17d9deb568bdeb4edf2ec008ac8b4bbf342733347f5f"
+  },
+  "model_card_identity": {
+    "Qwen3.8-27B": {
+      "sha256": "b8bdd4c23ab87abda560e4061f0fe349aac2b02c5de66e5bca24ecd5a8113875",
+      "artifact": "model_metadata/Qwen3.8-27B/README.md"
+    },
+    "Qwen3.5-9B": {
+      "sha256": "c5f5a8c2dddab69cfbf05279235aa5fddb137939a06539c4c7637aa900fef6d0",
+      "artifact": "model_metadata/Qwen3.5-9B/README.md"
+    }
+  },
+  "qwen27_architecture_note": "The checkpoint model card identifies Qwen3.8-27B and explicitly states that it builds on the Qwen3.5 architecture. Qwen3_5ForConditionalGeneration is therefore the architecture class, not evidence that the checkpoint is mislabeled."
+}

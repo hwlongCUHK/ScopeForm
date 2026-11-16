@@ -1,0 +1,437 @@
+{
+  "version": 2,
+  "description": "角色化语义框架：角色限定来源语境，body只表达待判条件；展开到core.json和现有固定记录求解流程。",
+  "design_basis": "DESIGN.md",
+  "semantic_types": {
+    "Identity": {
+      "types": [
+        "String"
+      ],
+      "meaning": "同一命名空间中已对齐的对象身份。"
+    },
+    "Dose": {
+      "types": [
+        "Int",
+        "Real"
+      ],
+      "unit_required": true,
+      "meaning": "单次使用量；一个框架中参与比较的Dose必须同单位。"
+    },
+    "Frequency": {
+      "types": [
+        "Int",
+        "Real"
+      ],
+      "unit": "1/d",
+      "meaning": "每日次数；抽取阶段已按公开证据统一到次/日。"
+    },
+    "Completion": {
+      "types": [
+        "Bool"
+      ],
+      "meaning": "记录所描述的完成状态，可属于实际状态或意图目标；event_completed只读取actual记录。缺省或null保持未知。"
+    }
+  },
+  "context_contract": {
+    "subject": "记录所描述的主体，与药品/检查对象分开。泛指推荐不自动继承实际患者身份。",
+    "target": "对象身份只有一个真源：角色object_id槽指向的来源字段，默认records.fields.object_id。引用where.target读取同一字段；仅用于原句明确指定对象的指称。",
+    "time": "记录中事件/状态的时间，不是文档发布时间；不把actual默认成current。",
+    "scenario": "独立实际或模拟场景；一个模拟场景内给定的实际值也标为actual。",
+    "modality": "本版陈述角色规范值：actual、recommendation、plan、order。它区分观察与行动意图，不代表已执行。reported是来源方式，不作为与actual互斥的角色。",
+    "state": "执行状态只存于fields.completed；不得加入where。",
+    "sharing": "每个角色绑定既有引用；一条引用的所有字段共享一条记录。跨查询复用引用ID仍是共同绑定。",
+    "slots": "角色fields定义语义槽。引用slots可将槽名映射到具体properties字段名；缺省使用同名字段。不同药品或单位可使用不同属性，同框架内按语义类型检查单位相容。",
+    "cross_context": "比较关系只决定字段和运算，不把参照强制改为recommendation。reference/allowed角色不补充modality，显式where条件完整保留；observed仍为actual。主体、时间、场景各自定位，不自动复制或增加相等条件。"
+  },
+  "frames": [
+    {
+      "id": "object_matches_reference",
+      "name": "实际对象与指定参照对象一致",
+      "meaning": "比较命题所指实际方案的对象身份与指定参照方案的对象身份。",
+      "competency_question": "当前实际使用的药品是否就是指定参照中的药品？",
+      "roles": {
+        "observed": {
+          "meaning": "被核对的实际方案。",
+          "where": {
+            "kind": "regimen",
+            "modality": "actual"
+          },
+          "fields": {
+            "object_id": "Identity"
+          }
+        },
+        "reference": {
+          "meaning": "命题指定的参照方案。 保留原文指定的recommendation/order/plan等模态，不由比较算子改写。",
+          "where": {
+            "kind": "regimen"
+          },
+          "fields": {
+            "object_id": "Identity"
+          }
+        }
+      },
+      "body": {
+        "definition": "object_match",
+        "arguments": {
+          "actual": {
+            "field": [
+              "observed",
+              "object_id"
+            ]
+          },
+          "reference": {
+            "field": [
+              "reference",
+              "object_id"
+            ]
+          }
+        }
+      },
+      "contrast": {
+        "question": "实际对象是否属于多个允许选项？",
+        "use": "object_in_allowed_set",
+        "reason": "唯一指定对象与完整允许集合是不同参照。"
+      },
+      "boundary": "对象是否相同只在body判断，不能先把observed的候选限制为reference的药品。 比较本身不决定参照模态；引用where按原句定位医嘱、推荐或其他指定方案。",
+      "theory_basis": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "object_in_allowed_set",
+      "name": "实际对象属于明确允许的参照集合",
+      "meaning": "实际对象与完整有限参照集合中至少一个对象身份相同。",
+      "competency_question": "当前药品是否属于来源明确列出的允许品种？",
+      "roles": {
+        "observed": {
+          "meaning": "被核对的实际方案。",
+          "where": {
+            "kind": "regimen",
+            "modality": "actual"
+          },
+          "fields": {
+            "object_id": "Identity"
+          }
+        },
+        "allowed": {
+          "meaning": "完整允许集合的各成员引用；不是某一含糊引用的候选域。 保留原文指定的recommendation/order/plan等模态，不由比较算子改写。",
+          "many": true,
+          "where": {
+            "kind": "regimen"
+          },
+          "fields": {
+            "object_id": "Identity"
+          }
+        }
+      },
+      "body": {
+        "definition": "member_of",
+        "arguments": {
+          "actual": {
+            "field": [
+              "observed",
+              "object_id"
+            ]
+          },
+          "allowed": {
+            "fields": [
+              "allowed",
+              "object_id"
+            ]
+          }
+        }
+      },
+      "contrast": {
+        "question": "实际对象是否与唯一指定推荐一致？",
+        "use": "object_matches_reference",
+        "reason": "多个允许选项不能被缩为任意一个选项。"
+      },
+      "boundary": "allowed=[]表示明确空集。未知完整集合不能写成空集；每个成员仍可有未知的身份字段。 比较本身不决定参照模态；引用where按原句定位医嘱、推荐或其他指定方案。",
+      "theory_basis": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "single_dose_conforms",
+      "name": "实际单次量符合指定参照",
+      "meaning": "实际单次量处于指定参照方案的单次量闭区间内。",
+      "competency_question": "实际每次使用量是否符合指定参照的每次使用量？",
+      "roles": {
+        "observed": {
+          "meaning": "命题所指时间和场景中的实际用药状态。",
+          "where": {
+            "kind": "regimen",
+            "modality": "actual"
+          },
+          "fields": {
+            "dose": "Dose"
+          }
+        },
+        "reference": {
+          "meaning": "指定参照方案；上下界必须通过同一引用读取。 保留原文指定的recommendation/order/plan等模态，不由比较算子改写。",
+          "where": {
+            "kind": "regimen"
+          },
+          "fields": {
+            "dose_lower": "Dose",
+            "dose_upper": "Dose"
+          }
+        }
+      },
+      "body": {
+        "definition": "within_closed_interval",
+        "arguments": {
+          "value": {
+            "field": [
+              "observed",
+              "dose"
+            ]
+          },
+          "lower": {
+            "field": [
+              "reference",
+              "dose_lower"
+            ]
+          },
+          "upper": {
+            "field": [
+              "reference",
+              "dose_upper"
+            ]
+          }
+        }
+      },
+      "contrast": {
+        "question": "实际每日合计量是否符合指定推荐？",
+        "use": "daily_total_conforms",
+        "reason": "单次量与日总量不能互换；频次可能补偿单次量差异。"
+      },
+      "boundary": "只判断单次量。不暗加药品一致、频次、疗程或适用人群条件。原文若为严格/单侧界限，使用core.numeric_compare表达。 比较本身不决定参照模态；引用where按原句定位医嘱、推荐或其他指定方案。",
+      "theory_basis": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "dose_frequency_conforms",
+      "name": "实际单次量与频次分别符合指定参照",
+      "meaning": "实际量和频次分别落入同一参照方案的对应闭区间。",
+      "competency_question": "实际每次量、每日次数是否分别符合指定方案？",
+      "roles": {
+        "observed": {
+          "meaning": "同一实际方案的单次量与日频次。",
+          "where": {
+            "kind": "regimen",
+            "modality": "actual"
+          },
+          "fields": {
+            "dose": "Dose",
+            "frequency": "Frequency"
+          }
+        },
+        "reference": {
+          "meaning": "同一参照方案的量和频次边界。 保留原文指定的recommendation/order/plan等模态，不由比较算子改写。",
+          "where": {
+            "kind": "regimen"
+          },
+          "fields": {
+            "dose_lower": "Dose",
+            "dose_upper": "Dose",
+            "frequency_lower": "Frequency",
+            "frequency_upper": "Frequency"
+          }
+        }
+      },
+      "body": {
+        "definition": "dose_frequency_in_range",
+        "arguments": {
+          "actual_dose": {
+            "field": [
+              "observed",
+              "dose"
+            ]
+          },
+          "actual_frequency": {
+            "field": [
+              "observed",
+              "frequency"
+            ]
+          },
+          "dose_lower": {
+            "field": [
+              "reference",
+              "dose_lower"
+            ]
+          },
+          "dose_upper": {
+            "field": [
+              "reference",
+              "dose_upper"
+            ]
+          },
+          "frequency_lower": {
+            "field": [
+              "reference",
+              "frequency_lower"
+            ]
+          },
+          "frequency_upper": {
+            "field": [
+              "reference",
+              "frequency_upper"
+            ]
+          }
+        }
+      },
+      "contrast": {
+        "question": "实际日总量是否相同？",
+        "use": "daily_total_conforms",
+        "reason": "每次2、每日3次与每次3、每日2次总量相同，但两个维度分别不符。"
+      },
+      "boundary": "两个药品或两个独立方案不可拼接剂量与频次。多个备选方案应分别构造框架再OR。 比较本身不决定参照模态；引用where按原句定位医嘱、推荐或其他指定方案。",
+      "theory_basis": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "daily_total_conforms",
+      "name": "实际名义日总量符合指定参照乘积区间",
+      "meaning": "实际单次量乘每日次数，比较指定参照方案非负量/频次区间的乘积边界。",
+      "competency_question": "按明确的单次量与日频次计算，实际名义日总量是否在指定推荐范围内？",
+      "roles": {
+        "observed": {
+          "meaning": "同一实际方案的单次量与日频次。",
+          "where": {
+            "kind": "regimen",
+            "modality": "actual"
+          },
+          "fields": {
+            "dose": "Dose",
+            "frequency": "Frequency"
+          }
+        },
+        "reference": {
+          "meaning": "同一参照方案允许相乘的量与频次边界。 保留原文指定的recommendation/order/plan等模态，不由比较算子改写。",
+          "where": {
+            "kind": "regimen"
+          },
+          "fields": {
+            "dose_lower": "Dose",
+            "dose_upper": "Dose",
+            "frequency_lower": "Frequency",
+            "frequency_upper": "Frequency"
+          }
+        }
+      },
+      "body": {
+        "definition": "daily_total_in_range",
+        "arguments": {
+          "actual_total": {
+            "definition": "daily_total",
+            "arguments": {
+              "per_event": {
+                "field": [
+                  "observed",
+                  "dose"
+                ]
+              },
+              "events_per_day": {
+                "field": [
+                  "observed",
+                  "frequency"
+                ]
+              }
+            }
+          },
+          "dose_lower": {
+            "field": [
+              "reference",
+              "dose_lower"
+            ]
+          },
+          "dose_upper": {
+            "field": [
+              "reference",
+              "dose_upper"
+            ]
+          },
+          "frequency_lower": {
+            "field": [
+              "reference",
+              "frequency_lower"
+            ]
+          },
+          "frequency_upper": {
+            "field": [
+              "reference",
+              "frequency_upper"
+            ]
+          }
+        }
+      },
+      "contrast": {
+        "question": "单次量和频次是否分别符合？",
+        "use": "dose_frequency_conforms",
+        "reason": "乘积一致不能推出每个维度一致。"
+      },
+      "boundary": "仅用于来源允许按非负区间乘积判断名义日总量的命题。直接给出的日总量用core区间定义；按需实际次数未知时保留未知；离散配对方案不可合成大包络。 比较本身不决定参照模态；引用where按原句定位医嘱、推荐或其他指定方案。",
+      "theory_basis": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "event_completed",
+      "name": "指定事件已经实际完成",
+      "meaning": "读取所指事件的实际完成状态，不从建议、预约或计划推断完成。",
+      "competency_question": "该主体在指定时间和场景中的检查是否已经完成？",
+      "roles": {
+        "event": {
+          "meaning": "被询问的实际事件/状态记录；定位成功不等于事件已完成。",
+          "where": {
+            "kind": "event",
+            "modality": "actual"
+          },
+          "fields": {
+            "completed": "Completion"
+          }
+        }
+      },
+      "body": {
+        "definition": "event_completed",
+        "arguments": {
+          "completed": {
+            "field": [
+              "event",
+              "completed"
+            ]
+          }
+        }
+      },
+      "contrast": {
+        "question": "是否有人建议或计划完成该事件？",
+        "reason": "行动意图与实际执行是不同命题，本框架只回答实际完成状态。"
+      },
+      "boundary": "completed不进入候选条件。未记录不等于false；否定使用core.negate包裹整个框架。",
+      "theory_basis": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ]
+}

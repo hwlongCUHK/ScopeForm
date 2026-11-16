@@ -1,0 +1,65 @@
+{
+  "method": "frame_direct_repair",
+  "status": "completed",
+  "items": [
+    {
+      "item_id": "C1",
+      "label": "refuted"
+    },
+    {
+      "item_id": "C2",
+      "label": "refuted"
+    },
+    {
+      "item_id": "C3",
+      "label": "not_determined"
+    },
+    {
+      "item_id": "C4",
+      "label": "supported"
+    }
+  ],
+  "diagnostics": {
+    "graph_sha256": "778176191f35c2a7a7f7bfbd795b231db7cb4a2f53751116f2ece8c8416864ad",
+    "selection_mode": "frame_direct",
+    "record_count": 5,
+    "reference_count": 5,
+    "multi_candidate_references": 0,
+    "changed_fields": [],
+    "mixed_references": [],
+    "empty_domains": [],
+    "verified": false,
+    "model_calls": 1,
+    "implementation": "CPM_single_protocol_role_frames",
+    "evidence_sha256": "b36553a98ca5d992261903858b944cc9cc8070f94fde5846ca4d26187e6be72b",
+    "solver_base_status": "sat",
+    "use_role_context": true,
+    "raw_frame_graph_sha256": "357fb593004f18762bc5189e7d7ed7f767a953e6017166c8670b7b1b81c6c1c2",
+    "frames_by_item": {
+      "C1": {
+        "daily_total_conforms": 1
+      },
+      "C2": {
+        "daily_total_conforms": 1
+      },
+      "C3": {},
+      "C4": {
+        "dose_frequency_conforms": 1
+      }
+    },
+    "frame_counts": {
+      "daily_total_conforms": 2,
+      "dose_frequency_conforms": 1
+    },
+    "framed_claims": 3,
+    "total_claims": 4,
+    "integrated_native_generation": true,
+    "extra_model_calls": 1,
+    "repair_rounds": 1,
+    "repair_issue_count": 0,
+    "repair_changed_graph": false,
+    "repair_categories": [],
+    "taxonomy_sha256": "9b568897732cde9631f0ae6a2f8349f6b37c1801a1a011a5bc9783252f94ba81",
+    "repair_context_protocol": "current_state"
+  }
+}

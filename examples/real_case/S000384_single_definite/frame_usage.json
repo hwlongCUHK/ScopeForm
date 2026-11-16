@@ -1,0 +1,20 @@
+{
+  "frames_by_item": {
+    "C1": {
+      "daily_total_conforms": 1
+    },
+    "C2": {
+      "daily_total_conforms": 1
+    },
+    "C3": {},
+    "C4": {
+      "dose_frequency_conforms": 1
+    }
+  },
+  "frame_counts": {
+    "daily_total_conforms": 2,
+    "dose_frequency_conforms": 1
+  },
+  "framed_claims": 3,
+  "total_claims": 4
+}

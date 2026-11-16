@@ -1,0 +1,8 @@
+{
+  "existing_rows_unchanged": 3461,
+  "migrated_source_calls": 190,
+  "wrong_endpoint_calls": [],
+  "calls_before_reservation": [],
+  "max_worker_phase_requests": 8,
+  "active_requests_interrupted": 0
+}

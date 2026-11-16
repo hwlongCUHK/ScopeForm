@@ -1,0 +1,13 @@
+{
+  "construction_protocol_sha256": "d0439da08fbb4c45fd7c27794aa0866a83173a0cf85d595888377d44d88bd9f3",
+  "events": 480,
+  "files": {
+    "actors.private.jsonl": "51a8cb893b0a0db2682042cd56242fc9e459312869e3f40f27d4789961105b72",
+    "static_actors.private.jsonl": "c71dd10d9594c3f33cfb96ba88c2fef5d3eb0e4c8518fe55766ceef212456b6c"
+  },
+  "kind": "confirmation15-gold-free-actor-bundle",
+  "private_source_text": true,
+  "public_release_authorized": false,
+  "sources": 120,
+  "static_packets": 360
+}

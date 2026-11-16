@@ -1,0 +1,84 @@
+{
+  "description": "人工语义对照，非benchmark案例。文档A记录P在模拟场景S1的实际用药和本次检查状态；B给出指定推荐及检查计划；C记载历史；D记载另一主体。每个字段的值均相对于自身记录。",
+  "properties": [
+    {"name": "object_id", "type": "String", "semantic_type": "Identity"},
+    {"name": "dose", "type": "Real", "semantic_type": "Dose", "unit": "unit"},
+    {"name": "frequency", "type": "Real", "semantic_type": "Frequency", "unit": "1/d"},
+    {"name": "dose_lower", "type": "Real", "semantic_type": "Dose", "unit": "unit"},
+    {"name": "dose_upper", "type": "Real", "semantic_type": "Dose", "unit": "unit"},
+    {"name": "frequency_lower", "type": "Real", "semantic_type": "Frequency", "unit": "1/d"},
+    {"name": "frequency_upper", "type": "Real", "semantic_type": "Frequency", "unit": "1/d"},
+    {"name": "completed", "type": "Bool", "semantic_type": "Completion"}
+  ],
+  "records": [
+    {
+      "id": "current_regimen", "kind": "regimen", "subject": "P", "time": "current", "modality": "actual", "scenario": "S1", "document_id": "A", "anchor_id": "current_regimen",
+      "fields": {"object_id": "药品甲", "dose": 2, "frequency": 3},
+      "sources": [{"document_id": "A", "location": "A1", "quote": "模拟场景S1：P当前使用药品甲，每次2单位，每日3次。"}]
+    },
+    {
+      "id": "historical_regimen", "kind": "regimen", "subject": "P", "time": "past", "modality": "actual", "scenario": "S1", "document_id": "C", "anchor_id": "past_regimen",
+      "fields": {"object_id": "药品甲", "dose": 3, "frequency": 2},
+      "sources": [{"document_id": "C", "location": "C1", "quote": "P过去使用药品甲，每次3单位，每日2次。"}]
+    },
+    {
+      "id": "other_subject", "kind": "regimen", "subject": "Q", "time": "current", "modality": "actual", "scenario": "S1", "document_id": "D", "anchor_id": "other_regimen",
+      "fields": {"object_id": "药品甲", "dose": 3, "frequency": 2},
+      "sources": [{"document_id": "D", "location": "D1", "quote": "Q当前使用药品甲，每次3单位，每日2次。"}]
+    },
+    {
+      "id": "other_scenario", "kind": "regimen", "subject": "P", "time": "current", "modality": "actual", "scenario": "S2", "document_id": "A", "anchor_id": "other_scenario",
+      "fields": {"object_id": "药品甲", "dose": 3, "frequency": 2},
+      "sources": [{"document_id": "A", "location": "A3", "quote": "另一个独立模拟场景S2：P当前每次3单位，每日2次。"}]
+    },
+    {
+      "id": "advised_regimen", "kind": "regimen", "time": "reference", "modality": "recommendation", "scenario": "protocol", "document_id": "B", "anchor_id": "specified_advice",
+      "fields": {"object_id": "药品甲", "dose_lower": 3, "dose_upper": 3, "frequency_lower": 2, "frequency_upper": 2},
+      "sources": [{"document_id": "B", "location": "B1", "quote": "本题指定推荐：药品甲，每次3单位，每日2次。"}]
+    },
+    {
+      "id": "actual_check", "kind": "event", "subject": "P", "time": "current", "modality": "actual", "scenario": "S1", "document_id": "A", "anchor_id": "current_check",
+      "fields": {"object_id": "检查K", "completed": null},
+      "sources": [{"document_id": "A", "location": "A2", "quote": "S1中P本次检查K的实际完成情况未记录。"}]
+    },
+    {
+      "id": "planned_check", "kind": "event", "subject": "P", "time": "current", "modality": "plan", "scenario": "S1", "document_id": "B", "anchor_id": "planned_check",
+      "fields": {"object_id": "检查K", "completed": true},
+      "sources": [{"document_id": "B", "location": "B2", "quote": "P在S1中的本次计划目标：完成检查K。这里描述目标状态。"}]
+    },
+    {
+      "id": "historical_check", "kind": "event", "subject": "P", "time": "past", "modality": "actual", "scenario": "S1", "document_id": "C", "anchor_id": "past_check",
+      "fields": {"object_id": "检查K", "completed": true},
+      "sources": [{"document_id": "C", "location": "C2", "quote": "P去年的检查K已完成。"}]
+    }
+  ],
+  "rules": [],
+  "references": [
+    {"id": "current", "text": "P在S1中的当前实际用药", "where": {"subject": "P", "time": "current", "scenario": "S1"}, "scores": {
+      "dose": {"current_regimen": 1, "historical_regimen": 4, "other_subject": 4, "other_scenario": 4},
+      "frequency": {"current_regimen": 1, "historical_regimen": 4, "other_subject": 4, "other_scenario": 4},
+      "object_id": {"current_regimen": 1}
+    }},
+    {"id": "advice", "text": "B1中指定推荐", "where": {"document_id": "B", "anchor_id": "specified_advice"}, "scores": {}},
+    {"id": "check", "text": "P在S1中本次检查K的实际状态", "where": {"subject": "P", "target": "检查K", "time": "current", "scenario": "S1"}, "scores": {
+      "completed": {"actual_check": 1, "planned_check": 4, "historical_check": 4}
+    }}
+  ],
+  "queries": [
+    {"item_id": "object_match", "text": "实际药品与指定推荐药品一致", "expr": {"frame": "object_matches_reference", "roles": {"observed": "current", "reference": "advice"}}},
+    {"item_id": "membership", "text": "实际药品属于B1明确允许的品种集合", "expr": {"frame": "object_in_allowed_set", "roles": {"observed": "current", "allowed": ["advice"]}}},
+    {"item_id": "single_dose", "text": "实际单次量符合指定推荐", "expr": {"frame": "single_dose_conforms", "roles": {"observed": "current", "reference": "advice"}}},
+    {"item_id": "dose_frequency", "text": "实际单次量和频次分别符合指定推荐", "expr": {"frame": "dose_frequency_conforms", "roles": {"observed": "current", "reference": "advice"}}},
+    {"item_id": "daily_total", "text": "实际名义日总量符合指定推荐", "expr": {"frame": "daily_total_conforms", "roles": {"observed": "current", "reference": "advice"}}},
+    {"item_id": "completed", "text": "本次检查已实际完成", "expr": {"frame": "event_completed", "roles": {"event": "check"}}},
+    {"item_id": "not_completed", "text": "本次检查未实际完成", "expr": {"definition": "negate", "arguments": {"condition": {"frame": "event_completed", "roles": {"event": "check"}}}}},
+    {"item_id": "dose_and_completed", "text": "单次量符合且本次检查完成", "expr": {"definition": "all_of", "arguments": {"conditions": [
+      {"frame": "single_dose_conforms", "roles": {"observed": "current", "reference": "advice"}},
+      {"frame": "event_completed", "roles": {"event": "check"}}
+    ]}}},
+    {"item_id": "total_or_completed", "text": "名义日总量符合或本次检查完成", "expr": {"definition": "any_of", "arguments": {"conditions": [
+      {"frame": "daily_total_conforms", "roles": {"observed": "current", "reference": "advice"}},
+      {"frame": "event_completed", "roles": {"event": "check"}}
+    ]}}}
+  ]
+}

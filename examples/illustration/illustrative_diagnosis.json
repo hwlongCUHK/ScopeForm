@@ -1,0 +1,26 @@
+{
+  "issues": [
+    {
+      "category": "context_fidelity",
+      "reason": "The query concerns current administration; obs incorrectly selects past administration.",
+      "evidence": [
+        {
+          "document_id": "r_now",
+          "anchor_id": "r_now_1",
+          "quote": "本次实际用药"
+        }
+      ],
+      "edits": [
+        {
+          "collection": "references",
+          "id": "obs",
+          "path": [
+            "where",
+            "time"
+          ],
+          "value": "current"
+        }
+      ]
+    }
+  ]
+}

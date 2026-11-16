@@ -1,0 +1,20 @@
+% Complete matched results: five settings for both backbones.
+\begin{table*}[t]
+\caption{Matched results across five settings. $M$ is percent; $E$ and $J$ count evidence-valid and jointly successful packets out of 480. Bold marks the higher value within each backbone pair.}
+\label{tab:merged}\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrr@{\hspace{9pt}}rrr@{\hspace{9pt}}rrr@{\hspace{9pt}}rrr@{}}
+\toprule
+&\multicolumn{3}{c}{deepseek-flash}&\multicolumn{3}{c}{deepseek-flash}&\multicolumn{3}{c}{Qwen3.8-27B}&\multicolumn{3}{c}{Qwen3.8-27B}\\
+&\multicolumn{3}{c}{}&\multicolumn{3}{c}{+ \method}&\multicolumn{3}{c}{}&\multicolumn{3}{c}{+ \method}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}
+Setting & $M$ & $E$ & $J$ & $M$ & $E$ & $J$ & $M$ & $E$ & $J$ & $M$ & $E$ & $J$ \\
+\midrule
+Fresh & 80.04 & 201 & 109 & \textbf{87.53} & \textbf{220} & \textbf{179} & 81.31 & 83 & 51 & \textbf{85.94} & \textbf{188} & \textbf{161} \\
+Labels & 81.16 & 201 & 101 & \textbf{88.27} & \textbf{213} & \textbf{176} & 82.16 & 69 & 43 & \textbf{84.23} & \textbf{180} & \textbf{158} \\
+Labels+Index & 83.08 & 198 & 100 & \textbf{87.50} & \textbf{205} & \textbf{169} & 82.27 & 79 & 52 & \textbf{83.23} & \textbf{175} & \textbf{153} \\
+Labels+Guard & 81.48 & 371 & 216 & \textbf{88.80} & \textbf{373} & \textbf{301} & 66.47 & 286 & 185 & \textbf{82.24} & \textbf{335} & \textbf{276} \\
+Index+Guard & 83.62 & 370 & 230 & \textbf{88.19} & \textbf{374} & \textbf{303} & 70.32 & 299 & 191 & \textbf{81.59} & \textbf{341} & \textbf{273} \\
+\bottomrule
+\end{tabular*}
+\end{table*}

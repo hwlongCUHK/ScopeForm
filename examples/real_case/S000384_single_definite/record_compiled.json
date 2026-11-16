@@ -1,0 +1,481 @@
+{
+  "scopes": [
+    {
+      "id": "ref_regimen"
+    },
+    {
+      "id": "actual_A"
+    },
+    {
+      "id": "actual_B"
+    },
+    {
+      "id": "actual_C"
+    },
+    {
+      "id": "actual_D"
+    }
+  ],
+  "properties": [
+    {
+      "name": "dose",
+      "type": "Real",
+      "semantic_type": "Dose",
+      "unit": "mL"
+    },
+    {
+      "name": "frequency",
+      "type": "Real",
+      "semantic_type": "Frequency",
+      "unit": "1/d"
+    },
+    {
+      "name": "dose_lower",
+      "type": "Real",
+      "semantic_type": "Dose",
+      "unit": "mL"
+    },
+    {
+      "name": "dose_upper",
+      "type": "Real",
+      "semantic_type": "Dose",
+      "unit": "mL"
+    },
+    {
+      "name": "frequency_lower",
+      "type": "Real",
+      "semantic_type": "Frequency",
+      "unit": "1/d"
+    },
+    {
+      "name": "frequency_upper",
+      "type": "Real",
+      "semantic_type": "Frequency",
+      "unit": "1/d"
+    }
+  ],
+  "facts": [
+    {
+      "id": "ref_regimen.dose_lower",
+      "text": "ref_regimen.dose_lower",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "ref_regimen",
+          "dose_lower"
+        ],
+        5
+      ],
+      "sources": [
+        {
+          "location": "S000384-TURN-015",
+          "quote": "葡萄糖酸钙口服液每次5毫升，每天2次口服"
+        }
+      ]
+    },
+    {
+      "id": "ref_regimen.dose_upper",
+      "text": "ref_regimen.dose_upper",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "ref_regimen",
+          "dose_upper"
+        ],
+        5
+      ],
+      "sources": [
+        {
+          "location": "S000384-TURN-015",
+          "quote": "葡萄糖酸钙口服液每次5毫升，每天2次口服"
+        }
+      ]
+    },
+    {
+      "id": "ref_regimen.frequency_lower",
+      "text": "ref_regimen.frequency_lower",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "ref_regimen",
+          "frequency_lower"
+        ],
+        2
+      ],
+      "sources": [
+        {
+          "location": "S000384-TURN-015",
+          "quote": "葡萄糖酸钙口服液每次5毫升，每天2次口服"
+        }
+      ]
+    },
+    {
+      "id": "ref_regimen.frequency_upper",
+      "text": "ref_regimen.frequency_upper",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "ref_regimen",
+          "frequency_upper"
+        ],
+        2
+      ],
+      "sources": [
+        {
+          "location": "S000384-TURN-015",
+          "quote": "葡萄糖酸钙口服液每次5毫升，每天2次口服"
+        }
+      ]
+    },
+    {
+      "id": "actual_A.dose",
+      "text": "actual_A.dose",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "actual_A",
+          "dose"
+        ],
+        5.5
+      ],
+      "sources": [
+        {
+          "location": "S000384-SIM-768f7445e8",
+          "quote": "本轮实际每日次数（次/日）：2\n本轮实际每次使用量（毫升）：5.5"
+        }
+      ]
+    },
+    {
+      "id": "actual_A.frequency",
+      "text": "actual_A.frequency",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "actual_A",
+          "frequency"
+        ],
+        2
+      ],
+      "sources": [
+        {
+          "location": "S000384-SIM-768f7445e8",
+          "quote": "本轮实际每日次数（次/日）：2\n本轮实际每次使用量（毫升）：5.5"
+        }
+      ]
+    },
+    {
+      "id": "actual_B.dose",
+      "text": "actual_B.dose",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "actual_B",
+          "dose"
+        ],
+        5.5
+      ],
+      "sources": [
+        {
+          "location": "S000384-SIM-e7d60bac71",
+          "quote": "本轮实际每日次数（次/日）：2\n本轮实际每次使用量（毫升）：5.5"
+        }
+      ]
+    },
+    {
+      "id": "actual_B.frequency",
+      "text": "actual_B.frequency",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "actual_B",
+          "frequency"
+        ],
+        2
+      ],
+      "sources": [
+        {
+          "location": "S000384-SIM-e7d60bac71",
+          "quote": "本轮实际每日次数（次/日）：2\n本轮实际每次使用量（毫升）：5.5"
+        }
+      ]
+    },
+    {
+      "id": "actual_D.dose",
+      "text": "actual_D.dose",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "actual_D",
+          "dose"
+        ],
+        5
+      ],
+      "sources": [
+        {
+          "location": "S000384-SIM-75de4cd935",
+          "quote": "本轮实际每日次数（次/日）：2\n本轮实际每次使用量（毫升）：5"
+        }
+      ]
+    },
+    {
+      "id": "actual_D.frequency",
+      "text": "actual_D.frequency",
+      "expr": [
+        "eq",
+        [
+          "var",
+          "actual_D",
+          "frequency"
+        ],
+        2
+      ],
+      "sources": [
+        {
+          "location": "S000384-SIM-75de4cd935",
+          "quote": "本轮实际每日次数（次/日）：2\n本轮实际每次使用量（毫升）：5"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "item_id": "C1",
+      "text": "场景A：参照原文锚点“S000384-TURN-015”中由题目reference_locator定位的那条单次量与每日次数记载。本轮实际日合计量位于原文单次量与日次数两区间相乘得到的名义日总量区间内。",
+      "expr": [
+        "and",
+        [
+          "ge",
+          [
+            "mul",
+            [
+              "var",
+              "actual_A",
+              "dose"
+            ],
+            [
+              "var",
+              "actual_A",
+              "frequency"
+            ]
+          ],
+          [
+            "mul",
+            [
+              "var",
+              "ref_regimen",
+              "dose_lower"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "frequency_lower"
+            ]
+          ]
+        ],
+        [
+          "le",
+          [
+            "mul",
+            [
+              "var",
+              "actual_A",
+              "dose"
+            ],
+            [
+              "var",
+              "actual_A",
+              "frequency"
+            ]
+          ],
+          [
+            "mul",
+            [
+              "var",
+              "ref_regimen",
+              "dose_upper"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "frequency_upper"
+            ]
+          ]
+        ]
+      ],
+      "evidence_ids": [
+        "S000384-DIALOGUE:S000384-TURN-015",
+        "S000384-SIMULATED-CHART:S000384-SIM-768f7445e8"
+      ]
+    },
+    {
+      "item_id": "C2",
+      "text": "场景B：参照原文锚点“S000384-TURN-015”中由题目reference_locator定位的那条单次量与每日次数记载。本轮实际日合计量位于原文单次量与日次数两区间相乘得到的名义日总量区间内。",
+      "expr": [
+        "and",
+        [
+          "ge",
+          [
+            "mul",
+            [
+              "var",
+              "actual_B",
+              "dose"
+            ],
+            [
+              "var",
+              "actual_B",
+              "frequency"
+            ]
+          ],
+          [
+            "mul",
+            [
+              "var",
+              "ref_regimen",
+              "dose_lower"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "frequency_lower"
+            ]
+          ]
+        ],
+        [
+          "le",
+          [
+            "mul",
+            [
+              "var",
+              "actual_B",
+              "dose"
+            ],
+            [
+              "var",
+              "actual_B",
+              "frequency"
+            ]
+          ],
+          [
+            "mul",
+            [
+              "var",
+              "ref_regimen",
+              "dose_upper"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "frequency_upper"
+            ]
+          ]
+        ]
+      ],
+      "evidence_ids": [
+        "S000384-DIALOGUE:S000384-TURN-015",
+        "S000384-SIMULATED-CHART:S000384-SIM-e7d60bac71"
+      ]
+    },
+    {
+      "item_id": "C3",
+      "text": "场景C：参照原文锚点“S000384-TURN-015”中由题目reference_locator定位的那条单次量与每日次数记载。本轮实际单次使用量已达到原文该方案的单次量下界。",
+      "expr": [
+        "ge",
+        [
+          "var",
+          "actual_C",
+          "dose"
+        ],
+        [
+          "var",
+          "ref_regimen",
+          "dose_lower"
+        ]
+      ],
+      "evidence_ids": [
+        "S000384-DIALOGUE:S000384-TURN-015",
+        "S000384-SIMULATED-CHART:S000384-SIM-b228b0abdf"
+      ]
+    },
+    {
+      "item_id": "C4",
+      "text": "场景D：参照原文锚点“S000384-TURN-015”中由题目reference_locator定位的那条单次量与每日次数记载。本轮实际单次使用量与每日次数，分别位于原文该方案明确记载的单次量区间和日次数区间内。",
+      "expr": [
+        "and",
+        [
+          "and",
+          [
+            "ge",
+            [
+              "var",
+              "actual_D",
+              "dose"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "dose_lower"
+            ]
+          ],
+          [
+            "le",
+            [
+              "var",
+              "actual_D",
+              "dose"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "dose_upper"
+            ]
+          ]
+        ],
+        [
+          "and",
+          [
+            "ge",
+            [
+              "var",
+              "actual_D",
+              "frequency"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "frequency_lower"
+            ]
+          ],
+          [
+            "le",
+            [
+              "var",
+              "actual_D",
+              "frequency"
+            ],
+            [
+              "var",
+              "ref_regimen",
+              "frequency_upper"
+            ]
+          ]
+        ]
+      ],
+      "evidence_ids": [
+        "S000384-DIALOGUE:S000384-TURN-015",
+        "S000384-SIMULATED-CHART:S000384-SIM-75de4cd935"
+      ]
+    }
+  ],
+  "choices": [],
+  "factors": []
+}

@@ -1,0 +1,14 @@
+{
+  "python": "3.10.9",
+  "environment": "new venv installed from requirements.txt",
+  "platform": "macOS-26.3-x86_64-i386-64bit-Mach-O",
+  "execution_root": "independently extracted ZIP in a separate temporary directory",
+  "model_api_calls": 0,
+  "full_reproduction_passed": true,
+  "paired_real_case_replay_passed": true,
+  "both_backbones_prepare_only_passed": true,
+  "subset_scoring_passed": true,
+  "credentials_scan_entries": 19723,
+  "credentials_found": 0,
+  "manifest_note": "offline_reproduction.json records the pre-publication validation archive; the final manifest additionally includes these validation reports."
+}

@@ -1,0 +1,18 @@
+{
+  "illustrative_example": true,
+  "model_calls": 0,
+  "backbone": "qwen",
+  "wrong_binding": {
+    "Q1": "supported",
+    "Q2": "supported"
+  },
+  "after_id_repair": {
+    "Q1": "supported",
+    "Q2": "refuted"
+  },
+  "missing_frequency": {
+    "Q1": "not_determined",
+    "Q2": "refuted"
+  },
+  "source_records_unchanged": true
+}

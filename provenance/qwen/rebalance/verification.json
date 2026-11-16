@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "utc": "2026-11-16T04:58:14.069502+00:00",
+  "phases": 384,
+  "all_terminal_checkpoints_handed_off_byte_identically": true,
+  "helper_model_calls": 2928,
+  "maximum_phase_requests": 40,
+  "returned_models": [
+    "Qwen3.8-27B"
+  ],
+  "system_fingerprints": [],
+  "active_original_requests_interrupted": 0
+}

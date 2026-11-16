@@ -1,0 +1,1569 @@
+{
+  "actor_manifest_sha256": "4edac165e650f9a3198d534f1d73b591bc6a1e8b666de98f39726b0c820ce315",
+  "analysis": {
+    "inference": "Source-paired95% bootstrap intervals and predeclared Holm family for method comparisons; do not claim benefit if intervals or failures do not support it.",
+    "not_billing": true,
+    "paired_family": "36 main primary contrasts:3models x4events x(evidence_constraint-labels_only,evidence_constraint-fresh,labels_only-fresh); Holm across36. Factorial2x2 interactions separately12 predeclared contrasts.",
+    "primary": "coverage-adjusted source-macro content; report retained63 and replacement57 separately; source is not a patient",
+    "secondary": [
+      "item content and exact full-packet content",
+      "six directional transitions",
+      "repair of changed initially-correct claims",
+      "preservation of stable initially-correct claims",
+      "current acquired evidence",
+      "joint content/evidence/actual-state success",
+      "actual saved-content correctness separately from readback",
+      "guard rejection/non-submission",
+      "requests/tools/input-output tokens"
+    ],
+    "shared_gpu_latency_not_dedicated_speed_benchmark": true,
+    "unit": "source_cluster, not packet/branch/claim"
+  },
+  "authorization": "User explicitly selected route2: preserve63, recover caches, blind information-screened replacements; complete finite experiments.",
+  "code_scope": "Main/static/robustness code frozen now. Web layout/action transformer is a separate predeclared runtime freeze before its first solve; no result-dependent design changes.",
+  "construction_protocol_sha256": "d0439da08fbb4c45fd7c27794aa0866a83173a0cf85d595888377d44d88bd9f3",
+  "construction_subsets": {
+    "blind_information_screened_original_corpus_replacement": 17,
+    "blind_information_screened_pool_replacement": 40,
+    "retained_qualified63": 63
+  },
+  "dataset_integrity_sha256": "b15f3848ef27055fec4bbb108d3d1c8295c0b9a231a2607aadc74cd830bd2cc2",
+  "date_hong_kong": "2026-10-22",
+  "decoding": {
+    "cross_model_context": "Use the installed safe context per checkpoint. Preserve over-context outcomes and additionally report the precomputed public-input common-context subset; do not drop failures from the primary coverage result.",
+    "enable_thinking": false,
+    "max_actions": 40,
+    "max_output_tokens": 8192,
+    "phase_context_preflight": "actual checkpoint tokenizer; no silent truncation",
+    "seed": 20261022,
+    "temperature": 0,
+    "workers_per_model": 8
+  },
+  "limitations": [
+    "source-disjoint not rule-family-disjoint",
+    "silver synthetic states, not clinical deployment validation",
+    "Qwen27B also helped author rules; cross-model results need builder-bias disclosure",
+    "same source-derived correlated claims and protection probes are not independent patients",
+    "new protocol/data/harness results are not interchangeable with older development scores",
+    "Replacement57 constructibility curation favors explicit quantitative regimen relations; not a random clinical sample or broad diagnosis benchmark.",
+    "Retained63 reuse Qwen-authored proposals; replacement57 are exact-grammar compiled, not model authored.",
+    "Auxiliary legacy shape audit excludes56 map-less proofs only from that comparison, without excluding old cases or scores.",
+    "Document-order replicate2 may coincide with baseline or reverse for a source; disclose actual permutations, do not claim seed-only variability."
+  ],
+  "local_scoring_code_sha256": {
+    "prepare_study15.py": "ad87f10b92b19e44b5b79114056a87b62ecbb57872c468eeece0ba2a1534a0d6",
+    "score_study15_local.py": "e95f8df7f4154f343a6a4c1bcfb7b13ad242a366635346ed5f8488f5c62e577b",
+    "score_workflow11_local.py": "94c7c1702309e37ee635486ea876b6831e57eb31b4893bc51ab217a90970ce31",
+    "test_confirmation14_workflow.py": "fe7a3b99d4d1676e1caee680200736a0585344f058e4e3343e32491389352719",
+    "test_study15.py": "20203ccda70468c1ea1ebaa561ddeeab46474557397518cc44839d2d70cc78ab"
+  },
+  "main_workflow": {
+    "all_five_cells_run_in_this_batch": true,
+    "event_phases_per_model": 2400,
+    "guard": "Current/acquired/unique citation checks and all-current-documents read for unknown; no label correctness or medical entailment feedback.",
+    "harness": "One shared serial JSON-action protocol for all3 families, with identical public tools and a gold-free action schema. This is a declared new common-harness study, not a continuation of old native-tool causal rankings.",
+    "initial_per_model": 120,
+    "missing_base": "Keep all20 dependent cells blocked in planned denominators if actual initial never submitted.",
+    "models": 3,
+    "planned_phases": 7560,
+    "sources": 120,
+    "start_state": "Actual model-submitted initial persistent checkpoint, including wrong labels/saved state. Every arm forks exactly that state. Never substitute an oracle or exclude a base by correctness."
+  },
+  "medical_review_pending": {
+    "scope": "Blinded local packet covering paired states, source entailment, role/temporal scope, clinical plausibility and insufficiency. Humans must actually perform review; do not invent approval or stall unrelated computation merely to wait for it.",
+    "source_ids": [
+      "S000087",
+      "C15Db1f2f6479acb",
+      "C15D44560a67f788",
+      "C15D2126fb9bcbb4",
+      "S000038",
+      "S000164",
+      "S000370",
+      "S000142",
+      "S000530",
+      "C15D159e5bd7ed10",
+      "C15D0ccba0af2846",
+      "C15D68875109c8c4",
+      "S000154",
+      "S000268",
+      "S000265",
+      "S000285",
+      "C15D7e137da21593",
+      "S000543",
+      "C15Dd8aed55ac04e",
+      "S000287",
+      "S000466",
+      "S000368",
+      "C15D0a5c2efa28c8",
+      "S000562",
+      "S000345",
+      "S000030",
+      "S000467",
+      "S000012",
+      "C15Dbe6297f05c3d",
+      "S000272",
+      "S000409",
+      "S000153",
+      "S000455",
+      "S000528",
+      "S000366",
+      "S000516",
+      "S000636",
+      "S000808",
+      "S000632",
+      "S000814",
+      "S000609",
+      "S000780",
+      "S000661",
+      "S000855",
+      "S000884",
+      "S000743",
+      "S000669",
+      "S000611",
+      "S000813",
+      "S000984",
+      "S000850",
+      "S000761",
+      "S000885",
+      "S000992",
+      "S000817",
+      "S000879",
+      "S000936",
+      "S000666",
+      "S000874",
+      "S000750"
+    ],
+    "sources": 60,
+    "suggested_independent_reviewers": 2
+  },
+  "model_context_limits": {
+    "GLM-4-9B-0414": 32768,
+    "Qwen3.5-9B": 65536,
+    "Qwen3.8-27B": 65536
+  },
+  "model_scope": "Only installed existing checkpoints. Qwen directory labels are aliases; save actual model/tokenizer/config hashes. No downloads or commercial API fallback.",
+  "models": [
+    "Qwen3.5-9B",
+    "Qwen3.8-27B",
+    "GLM-4-9B-0414"
+  ],
+  "nonmedical_preflight": "All models must pass serial lookup, nested write/readback and public-tool argument checks before any task generation. Interface failure is not model accuracy0.",
+  "not_original120_all_qualified": true,
+  "parent_service_sha256": {
+    "baseline10_common.py": "0e6806a1ff1fd835644116cf8a1a28ae099116c3f9fa243541cb22a920b5e94b",
+    "baseline10_protocol.json": "fd30d0457dbb55385efb3b5647bc504c5cfdf51f4655d905d1418c744a11365f",
+    "service_baseline10.py": "a7c58614abc6ad0d37d254a6117adf665bcee6c5282a843147082f4dda6c9fc8",
+    "service_expansion08.py": "a70c21f3980326a10071c45c1a5176017dc7ac5171546b135b9ce0ec079bf79e"
+  },
+  "planned_logical_slots_total": 16020,
+  "resource_scope": {
+    "admission": "Three fresh whole-idle samples plus atomic service admission; no foreign tasks stopped; stricter than authorized low-load sharing.",
+    "cleanup": "Track every owned service/worker group and loopback port; verify all are stopped before final delivery.",
+    "max_simultaneous_model_services": 2
+  },
+  "retry_policy": "No output-dependent retries or reselection. Recover journaled responses using the same request ID. Ambiguous requests are terminal/not regenerated. Preserve failure and blocked denominators.",
+  "robustness": {
+    "additional_trajectories": 2,
+    "events": [
+      "key_mixed",
+      "single_definite",
+      "single_uncertainty",
+      "neutral"
+    ],
+    "intervention": "Fixed independent-document listing permutations, with fresh actual initial run for each full trajectory. Keep block text, within-dialogue chronology, labels and rules unchanged. Original main trajectory is replicate0; changes of seed at temperature0 alone are not the robustness experiment.",
+    "methods": [
+      "evidence_constraint",
+      "labels_only",
+      "fresh"
+    ],
+    "models": 3,
+    "planned_additional_phases": 2340,
+    "source_ids": [
+      "S000142",
+      "C15D68875109c8c4",
+      "S000530",
+      "C15D2115cff4e168",
+      "C15D0ccba0af2846",
+      "S000431",
+      "S000368",
+      "S000579",
+      "C15Dd8aed55ac04e",
+      "C15D7e137da21593",
+      "S000528",
+      "S000406",
+      "S000547",
+      "S000409",
+      "C15Dbe6297f05c3d",
+      "S000851",
+      "S000722",
+      "S000913",
+      "S000808",
+      "S000672",
+      "S000850",
+      "S000813",
+      "S000903",
+      "S000611",
+      "S000911",
+      "S000907",
+      "S000936",
+      "S000624",
+      "S000869",
+      "S000914"
+    ],
+    "sources": 30
+  },
+  "runtime_code_sha256": {
+    "baseline10_common.py": "0e6806a1ff1fd835644116cf8a1a28ae099116c3f9fa243541cb22a920b5e94b",
+    "confirmation14_workflow.py": "c25c3728f31c1d5e866f40a0a677d2d990319d027ae338c49820e26693b68121",
+    "export_study15.py": "f2da9dc720cdba8d165ffcac550c7b3ec9eb20b8fcd76db8f376959ffb51014d",
+    "medical_runtime04.py": "1e7dc8548f5396c615c88632a3e3de770ef0671c071add6638f00e01fba368b5",
+    "medical_runtime07.py": "cb6867b91a379dd960b50a651940b21b971bdd2233bf941cbfd22abc44d7460f",
+    "paired_runtime06.py": "552c19ce0ada550caf8d036cdaf152ba336d5c47c88930e457f901da695bab58",
+    "pilot_runtime.py": "5046c5f56dcd20285e42049792e17da4808d5f97a7c11e9bb69a706c5b737a26",
+    "queue_study15.py": "1758e2e66d069400adf3f092a4bab44b6d04db7a2e5f387ea5ed3f04bd0b3530",
+    "run_generation.py": "78438c7d97a6a132185033872d399a5b9b81e16a01ee39f2021e08b005702113",
+    "run_workflow11.py": "d327ede8b7a9d69bce21252100dfb475973990c086a72ec335c70b6c0886ee31",
+    "service_baseline10.py": "a7c58614abc6ad0d37d254a6117adf665bcee6c5282a843147082f4dda6c9fc8",
+    "service_expansion08.py": "a70c21f3980326a10071c45c1a5176017dc7ac5171546b135b9ce0ec079bf79e",
+    "study15.py": "33d7e5f688a93335e4a4387a356e6404156815fc9691608e8bcda1779348bada",
+    "token_count.py": "53d8cec36d9b60635355f4065447ca8330be4bd46c10873899ee5cbace2de42a",
+    "typed_client03.py": "0f8cf74382fe62ed6dc678ce61fe7dc7e9be31743ea4137a6a311506cd3c5ce2",
+    "validate_generated.py": "a1751d89117889d9b2544e37a26f2447b1f1239ad1b5c3842ecb70ff76b6780c",
+    "workflow11_runtime.py": "eb664e1f2870742774da4afe6ffb297338db0c5a321403424ac2915dd4844b14",
+    "workflow12.py": "520f755b33578ff6ef2ce353d7e899c5184657469b716e458b2c15e47aa0c5ec"
+  },
+  "solver_runs_started": false,
+  "source_catalog": [
+    {
+      "characters": 2012,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-94835e9d2aa755f1",
+      "source_id": "C15D0a5c2efa28c8",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1907,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-9b19f9ada47b9797",
+      "source_id": "C15D0ccba0af2846",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1066,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-c191713b117e7297",
+      "source_id": "C15D159e5bd7ed10",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1343,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-bc70e7a4d048159d",
+      "source_id": "C15D2115cff4e168",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1155,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-fb1c958cbbd22e6c",
+      "source_id": "C15D2126fb9bcbb4",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4687,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-f00843472afc22cf",
+      "source_id": "C15D37a8098967c3",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1250,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-1c5226b5460f736f",
+      "source_id": "C15D44560a67f788",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4599,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-0d4a9bfd2c29e3da",
+      "source_id": "C15D461fbf708aed",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1482,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-56389590dfc2c31b",
+      "source_id": "C15D68875109c8c4",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2046,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-81888fcc2eb425d2",
+      "source_id": "C15D7e137da21593",
+      "split": "locked_test"
+    },
+    {
+      "characters": 25589,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-472800eaff12b5dd",
+      "source_id": "C15D9eb5fbb495aa",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1788,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-829b1170ad089e8c",
+      "source_id": "C15Da952a890aaf9",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1540,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-32e3364a849b5304",
+      "source_id": "C15Db1f2f6479acb",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4017,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-21ea4bf7ad5e9d0f",
+      "source_id": "C15Dbe6297f05c3d",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2016,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-84484bf9a3191e39",
+      "source_id": "C15Dd8aed55ac04e",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1468,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-c773fc22618b6b12",
+      "source_id": "C15Deb9f5d5fd0fa",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1249,
+      "construction_subset": "blind_information_screened_original_corpus_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-090b3b5b2f9e3900",
+      "source_id": "C15Df2b01a564df2",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1147,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-03a42188d6110199",
+      "source_id": "S000011",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4703,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-042fb4f0ade9f5f9",
+      "source_id": "S000012",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1719,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-09b38edae1518085",
+      "source_id": "S000022",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4052,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-0cca2fda845aa471",
+      "source_id": "S000030",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1606,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-104497dea589e7d0",
+      "source_id": "S000038",
+      "split": "locked_test"
+    },
+    {
+      "characters": 3066,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-1b45282880d939f1",
+      "source_id": "S000056",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4240,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-1eec690c090b0a88",
+      "source_id": "S000065",
+      "split": "locked_test"
+    },
+    {
+      "characters": 5367,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-1f924a9c86971e63",
+      "source_id": "S000068",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2120,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-1fa89507db8dd391",
+      "source_id": "S000069",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1685,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-2a9c6f84f1c643cf",
+      "source_id": "S000087",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2030,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-37572941d4963a5f",
+      "source_id": "S000114",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1125,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-3b1349c510ecdfc5",
+      "source_id": "S000122",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2241,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-3f7e408d793e3778",
+      "source_id": "S000130",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1795,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-43fa22a3f877c1e7",
+      "source_id": "S000142",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2459,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-46bfb266c7d7b1ef",
+      "source_id": "S000145",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4835,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-4a35d308bbe1e574",
+      "source_id": "S000153",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2286,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-4a4763f9351c1a2f",
+      "source_id": "S000154",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1103,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-4bd21cd98600f736",
+      "source_id": "S000157",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1054,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-4e9cd494bbe6c9a1",
+      "source_id": "S000164",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2020,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-5460b7933506711e",
+      "source_id": "S000176",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2594,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-57d553f8548b08ad",
+      "source_id": "S000180",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2373,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-708a16aef6330851",
+      "source_id": "S000253",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2033,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-76c07fa0913d6223",
+      "source_id": "S000265",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2402,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-770393acc8cef6b9",
+      "source_id": "S000268",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1009,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-7798f198ae681538",
+      "source_id": "S000269",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4873,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-77f305db1ba8e6a2",
+      "source_id": "S000272",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2354,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-7c11292b038b1fac",
+      "source_id": "S000285",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2090,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-7d7b5728813f7f62",
+      "source_id": "S000287",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4263,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-87fc9106af32b564",
+      "source_id": "S000312",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1209,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-951981be80a11279",
+      "source_id": "S000344",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4600,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-95620d59fba1e9a0",
+      "source_id": "S000345",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4937,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-9fa76cdda74b510a",
+      "source_id": "S000366",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2183,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-a018ebf6dddf16f6",
+      "source_id": "S000368",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1049,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-a0ac22bbe6f79adc",
+      "source_id": "S000370",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2036,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-a6a754b0a3815525",
+      "source_id": "S000384",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4415,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-af563857447502c0",
+      "source_id": "S000406",
+      "split": "locked_test"
+    },
+    {
+      "characters": 5181,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-b0d54170fb8ee984",
+      "source_id": "S000409",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1013,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-b5206c71f2a2f3b6",
+      "source_id": "S000419",
+      "split": "locked_test"
+    },
+    {
+      "characters": 5966,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-b966be7dcff4802f",
+      "source_id": "S000427",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2284,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-bbd854b8cce4a182",
+      "source_id": "S000431",
+      "split": "locked_test"
+    },
+    {
+      "characters": 7662,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-c824d7d0ba039a14",
+      "source_id": "S000455",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2880,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-caebd8b2646212f7",
+      "source_id": "S000466",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4383,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-cb951bd021901fa2",
+      "source_id": "S000467",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4357,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-de4b7fcd9fb99b84",
+      "source_id": "S000510",
+      "split": "locked_test"
+    },
+    {
+      "characters": 6280,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-e058ea953402bcce",
+      "source_id": "S000516",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4236,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-e19ebda5c1046af8",
+      "source_id": "S000519",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4578,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-e4610926a4358d11",
+      "source_id": "S000528",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1132,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-e5755e7b7bbd09f0",
+      "source_id": "S000530",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2948,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-e8dc64c672d370de",
+      "source_id": "S000543",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4421,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-eaee0c5f7e889c12",
+      "source_id": "S000547",
+      "split": "locked_test"
+    },
+    {
+      "characters": 1097,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-f0231881c0b5f1e0",
+      "source_id": "S000557",
+      "split": "locked_test"
+    },
+    {
+      "characters": 2612,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-f0c4796ff4d0b20e",
+      "source_id": "S000562",
+      "split": "locked_test"
+    },
+    {
+      "characters": 3927,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-f80b718b5e0d54e7",
+      "source_id": "S000579",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4393,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-fcd153f7c59a6221",
+      "source_id": "S000590",
+      "split": "locked_test"
+    },
+    {
+      "characters": 3512,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "dialogue",
+      "source_cluster": "CMCQA-fcdacd12d94f4b7f",
+      "source_id": "S000592",
+      "split": "locked_test"
+    },
+    {
+      "characters": 9117,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-058158f06c1393f9",
+      "source_id": "S000609",
+      "split": "locked_test"
+    },
+    {
+      "characters": 13870,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-0621e508395791ae",
+      "source_id": "S000611",
+      "split": "locked_test"
+    },
+    {
+      "characters": 34724,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-0c08b92415f4f890",
+      "source_id": "S000619",
+      "split": "locked_test"
+    },
+    {
+      "characters": 30683,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-11096ec2aa55fa5f",
+      "source_id": "S000624",
+      "split": "locked_test"
+    },
+    {
+      "characters": 8478,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-18f7578ae503d2cf",
+      "source_id": "S000632",
+      "split": "locked_test"
+    },
+    {
+      "characters": 8963,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-1a4db86e84c86585",
+      "source_id": "S000633",
+      "split": "locked_test"
+    },
+    {
+      "characters": 7688,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-1bee604c24002259",
+      "source_id": "S000636",
+      "split": "locked_test"
+    },
+    {
+      "characters": 21299,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-1db843b57d83b4ef",
+      "source_id": "S000641",
+      "split": "locked_test"
+    },
+    {
+      "characters": 27148,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-2a1a3a774e4e87d8",
+      "source_id": "S000650",
+      "split": "locked_test"
+    },
+    {
+      "characters": 6345,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-31e18383ab540f92",
+      "source_id": "S000661",
+      "split": "locked_test"
+    },
+    {
+      "characters": 40494,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-34756d25eeca3056",
+      "source_id": "S000666",
+      "split": "locked_test"
+    },
+    {
+      "characters": 20664,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-36449ac473c461c3",
+      "source_id": "S000669",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4971,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-3aa49af8761c2861",
+      "source_id": "S000672",
+      "split": "locked_test"
+    },
+    {
+      "characters": 18714,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-3d7bb19d62e4fc30",
+      "source_id": "S000675",
+      "split": "locked_test"
+    },
+    {
+      "characters": 16976,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-3f96e3c554582d66",
+      "source_id": "S000681",
+      "split": "locked_test"
+    },
+    {
+      "characters": 7768,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-54ce9bbcbdfe6032",
+      "source_id": "S000722",
+      "split": "locked_test"
+    },
+    {
+      "characters": 15223,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-65f2754fad78cc35",
+      "source_id": "S000743",
+      "split": "locked_test"
+    },
+    {
+      "characters": 42102,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-6ac90bd05933a34a",
+      "source_id": "S000750",
+      "split": "locked_test"
+    },
+    {
+      "characters": 16890,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-701d3bb0361ea5c4",
+      "source_id": "S000757",
+      "split": "locked_test"
+    },
+    {
+      "characters": 14394,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-725ef336a8fad5fc",
+      "source_id": "S000761",
+      "split": "locked_test"
+    },
+    {
+      "characters": 34835,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-75bad38d9a9a242b",
+      "source_id": "S000771",
+      "split": "locked_test"
+    },
+    {
+      "characters": 10875,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-79d0150e4fe59604",
+      "source_id": "S000780",
+      "split": "locked_test"
+    },
+    {
+      "characters": 8845,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-8823e3596fcf2acc",
+      "source_id": "S000808",
+      "split": "locked_test"
+    },
+    {
+      "characters": 18777,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-88f031d5f5f070ef",
+      "source_id": "S000813",
+      "split": "locked_test"
+    },
+    {
+      "characters": 4669,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-896cafcd83a390aa",
+      "source_id": "S000814",
+      "split": "locked_test"
+    },
+    {
+      "characters": 35511,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-8c1be0e52f0bd427",
+      "source_id": "S000817",
+      "split": "locked_test"
+    },
+    {
+      "characters": 13561,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-a7044be6278d9796",
+      "source_id": "S000850",
+      "split": "locked_test"
+    },
+    {
+      "characters": 8388,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-a82368b323f62c55",
+      "source_id": "S000851",
+      "split": "locked_test"
+    },
+    {
+      "characters": 5205,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-a9019c5046b1e38d",
+      "source_id": "S000855",
+      "split": "locked_test"
+    },
+    {
+      "characters": 33451,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-b5d2da8fc2516137",
+      "source_id": "S000869",
+      "split": "locked_test"
+    },
+    {
+      "characters": 24100,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-ba065c85e1d8fdea",
+      "source_id": "S000874",
+      "split": "locked_test"
+    },
+    {
+      "characters": 32977,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-bce5fbb818f4066b",
+      "source_id": "S000879",
+      "split": "locked_test"
+    },
+    {
+      "characters": 16041,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-becc64897db62c3b",
+      "source_id": "S000884",
+      "split": "locked_test"
+    },
+    {
+      "characters": 33083,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-bf99653ca2ca4c0a",
+      "source_id": "S000885",
+      "split": "locked_test"
+    },
+    {
+      "characters": 5921,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-c2abcbaba6828a92",
+      "source_id": "S000889",
+      "split": "locked_test"
+    },
+    {
+      "characters": 15918,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-ca90a17ff8fef1ec",
+      "source_id": "S000903",
+      "split": "locked_test"
+    },
+    {
+      "characters": 26281,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-cc8f66cf57118f74",
+      "source_id": "S000907",
+      "split": "locked_test"
+    },
+    {
+      "characters": 14418,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-d13c0ba868957e2c",
+      "source_id": "S000911",
+      "split": "locked_test"
+    },
+    {
+      "characters": 6578,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-d4023b398221e002",
+      "source_id": "S000913",
+      "split": "locked_test"
+    },
+    {
+      "characters": 31136,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-d40b60fa0b5777c4",
+      "source_id": "S000914",
+      "split": "locked_test"
+    },
+    {
+      "characters": 15175,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-d6795c9d67eb42be",
+      "source_id": "S000923",
+      "split": "locked_test"
+    },
+    {
+      "characters": 42866,
+      "construction_subset": "retained_qualified63",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-dac8f226f667695e",
+      "source_id": "S000932",
+      "split": "locked_test"
+    },
+    {
+      "characters": 40360,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-dd2d6ae03ba5293f",
+      "source_id": "S000936",
+      "split": "locked_test"
+    },
+    {
+      "characters": 14221,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-eae46a6d8eb871f9",
+      "source_id": "S000961",
+      "split": "locked_test"
+    },
+    {
+      "characters": 7634,
+      "construction_subset": "retained_qualified63",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-f0bb318e40e20480",
+      "source_id": "S000971",
+      "split": "locked_test"
+    },
+    {
+      "characters": 12328,
+      "construction_subset": "retained_qualified63",
+      "length_band": 1,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-f8a665bf2c7e3c93",
+      "source_id": "S000984",
+      "split": "locked_test"
+    },
+    {
+      "characters": 8580,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 0,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-fa0bc56b7258fcd0",
+      "source_id": "S000990",
+      "split": "locked_test"
+    },
+    {
+      "characters": 28734,
+      "construction_subset": "blind_information_screened_pool_replacement",
+      "length_band": 2,
+      "modality": "drug",
+      "source_cluster": "DRUG-FAMILY-fa386a92a67f8ed6",
+      "source_id": "S000992",
+      "split": "locked_test"
+    }
+  ],
+  "source_ids": [
+    "C15D0a5c2efa28c8",
+    "C15D0ccba0af2846",
+    "C15D159e5bd7ed10",
+    "C15D2115cff4e168",
+    "C15D2126fb9bcbb4",
+    "C15D37a8098967c3",
+    "C15D44560a67f788",
+    "C15D461fbf708aed",
+    "C15D68875109c8c4",
+    "C15D7e137da21593",
+    "C15D9eb5fbb495aa",
+    "C15Da952a890aaf9",
+    "C15Db1f2f6479acb",
+    "C15Dbe6297f05c3d",
+    "C15Dd8aed55ac04e",
+    "C15Deb9f5d5fd0fa",
+    "C15Df2b01a564df2",
+    "S000011",
+    "S000012",
+    "S000022",
+    "S000030",
+    "S000038",
+    "S000056",
+    "S000065",
+    "S000068",
+    "S000069",
+    "S000087",
+    "S000114",
+    "S000122",
+    "S000130",
+    "S000142",
+    "S000145",
+    "S000153",
+    "S000154",
+    "S000157",
+    "S000164",
+    "S000176",
+    "S000180",
+    "S000253",
+    "S000265",
+    "S000268",
+    "S000269",
+    "S000272",
+    "S000285",
+    "S000287",
+    "S000312",
+    "S000344",
+    "S000345",
+    "S000366",
+    "S000368",
+    "S000370",
+    "S000384",
+    "S000406",
+    "S000409",
+    "S000419",
+    "S000427",
+    "S000431",
+    "S000455",
+    "S000466",
+    "S000467",
+    "S000510",
+    "S000516",
+    "S000519",
+    "S000528",
+    "S000530",
+    "S000543",
+    "S000547",
+    "S000557",
+    "S000562",
+    "S000579",
+    "S000590",
+    "S000592",
+    "S000609",
+    "S000611",
+    "S000619",
+    "S000624",
+    "S000632",
+    "S000633",
+    "S000636",
+    "S000641",
+    "S000650",
+    "S000661",
+    "S000666",
+    "S000669",
+    "S000672",
+    "S000675",
+    "S000681",
+    "S000722",
+    "S000743",
+    "S000750",
+    "S000757",
+    "S000761",
+    "S000771",
+    "S000780",
+    "S000808",
+    "S000813",
+    "S000814",
+    "S000817",
+    "S000850",
+    "S000851",
+    "S000855",
+    "S000869",
+    "S000874",
+    "S000879",
+    "S000884",
+    "S000885",
+    "S000889",
+    "S000903",
+    "S000907",
+    "S000911",
+    "S000913",
+    "S000914",
+    "S000923",
+    "S000932",
+    "S000936",
+    "S000961",
+    "S000971",
+    "S000984",
+    "S000990",
+    "S000992"
+  ],
+  "source_integrity_sha256": "b07fa5837aaf51e08eb26bdca4467f20fa68af25bc13ffc6e12e7104867fa25a",
+  "start_gate": [
+    "selected replacement120 qualified",
+    "unchanged qualification rules",
+    "source/target separation",
+    "same-stem triplets and six direction quotas",
+    "independent exact evaluator and mechanical replay",
+    "task/source manifests",
+    "prior author resources cleaned"
+  ],
+  "static_shortcut_controls": {
+    "conditions": [
+      "full_context",
+      "source_withheld",
+      "stem_only"
+    ],
+    "interpretation": "Predict the same full-information targets under each input ablation; unknown is not automatically the correct label when evidence is withheld. Report balanced-family and persistent-gap results separately.",
+    "models": 3,
+    "physical_requests": "Hash-deduplicate identical public payloads, including3 identical stem-only states, before any inference; save mapping to every logical target. Report exact physical count after input compilation.",
+    "physical_unique_per_model": 840,
+    "planned_logical_packet_slots": 3240,
+    "sources": 120,
+    "states_per_source": 3
+  },
+  "version": "confirmation15-replacement-finite-design-v1",
+  "web_service_controls": {
+    "design": "Same current medical facts, claims and initial persistence across paired layouts; actual initial run per layout. Model calls public service tools; revision-scoped anchors prevent expired evidence from masquerading as current. Authorization denial is a protocol outcome, not medical content failure.",
+    "events": [
+      "critical_medical_update_with_new_version",
+      "write_authorization_withdrawal",
+      "neutral_version_change_no_medical_fact_change"
+    ],
+    "layouts": [
+      "centralized_current_materials",
+      "distributed_versioned_services"
+    ],
+    "methods": [
+      "evidence_constraint",
+      "labels_only",
+      "fresh"
+    ],
+    "models": 3,
+    "not_novelty_claim": "A local HTTP wrapper alone is not a scientific contribution. Separate placement cost, stale-evidence rejection, authorization compliance and clinical content.",
+    "planned_phases": 2880,
+    "source_ids": [
+      "C15Da952a890aaf9",
+      "S000269",
+      "C15D0ccba0af2846",
+      "S000530",
+      "S000419",
+      "S000344",
+      "C15D159e5bd7ed10",
+      "C15Db1f2f6479acb",
+      "S000176",
+      "S000268",
+      "C15Dd8aed55ac04e",
+      "S000287",
+      "S000154",
+      "S000466",
+      "S000562",
+      "S000285",
+      "S000510",
+      "S000312",
+      "S000345",
+      "S000467",
+      "S000547",
+      "S000590",
+      "S000409",
+      "C15D9eb5fbb495aa",
+      "S000722",
+      "S000661",
+      "S000913",
+      "S000633",
+      "S000814",
+      "S000780",
+      "S000808",
+      "S000851",
+      "S000757",
+      "S000923",
+      "S000611",
+      "S000961",
+      "S000761",
+      "S000681",
+      "S000984",
+      "S000743",
+      "S000750",
+      "S000874",
+      "S000817",
+      "S000771",
+      "S000914",
+      "S000619",
+      "S000992",
+      "S000666"
+    ],
+    "sources": 48
+  },
+  "workflow_events": [
+    "key_mixed",
+    "single_definite",
+    "single_uncertainty",
+    "neutral"
+  ],
+  "workflow_methods": {
+    "evidence_constraint": {
+      "observable_guard": true,
+      "prior_index": true,
+      "prior_labels": true
+    },
+    "fresh": {
+      "observable_guard": false,
+      "prior_index": false,
+      "prior_labels": false
+    },
+    "index_only": {
+      "observable_guard": false,
+      "prior_index": true,
+      "prior_labels": true
+    },
+    "labels_guard": {
+      "observable_guard": true,
+      "prior_index": false,
+      "prior_labels": true
+    },
+    "labels_only": {
+      "observable_guard": false,
+      "prior_index": false,
+      "prior_labels": true
+    }
+  }
+}

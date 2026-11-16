@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "title": "中文多文档形式化的语义保真诊断",
+  "attribution": "本项目依据类型系统、框架语义、显式医疗语境和逻辑语义组织的分析框架；不是任何单一标准规定的完整错误分类表。",
+  "classification_rule": "按被违反的表示或语义要求分类，不按字段名称、Python异常名称或答案是否正确分类。一个独立问题给一个主要类别；不同问题分别记录。不主张四类天然互斥、穷尽或已经得到实证验证。",
+  "categories": [
+    {
+      "id": "representation_validity",
+      "name": "表示合法性",
+      "requirement": "表达式结构、操作签名、参数类型、单位及引用必须满足当前表示语言的要求。",
+      "question": "在不改变原文含义的前提下，当前图是否能被正确解析、引用、类型检查和编译？",
+      "boundary": "缺少某字段的值可以是合法未知；缺少访问它所需的类型声明或槽映射才是表示问题。编译报错只是线索，不能直接证明模型语义错误。库本身的限制也可能造成不匹配。",
+      "examples": ["未声明的引用", "字符串参与数值比较", "frequency槽未映射到已有频次字段"],
+      "theory": ["类型系统和表达式签名", "HL7 CQL的类型与类型推导"],
+      "sources": [{"title": "HL7 CQL — Types and Type Inference", "url": "https://cql.hl7.org/03-developersguide.html#type-inference"}],
+      "adaptation": "借鉴类型与可执行表达式原则；本项目不是CQL实现，也不宣称兼容CQL的null传播语义。"
+    },
+    {
+      "id": "concept_role_fidelity",
+      "name": "概念与角色保真",
+      "requirement": "关系本身的含义及其参数角色必须对应原命题。",
+      "question": "所选框架表达的是原命题询问的关系吗？每个参数是否承担正确的角色？",
+      "boundary": "底层类型相同不代表角色相同。若关系及角色正确、但指向了另一时间或场景的记录，优先归入语境保真。",
+      "examples": ["把日总量符合替换成单次量符合", "实际值与推荐下界交换", "把允许的备选集合误当作一个待消歧来源"],
+      "theory": ["框架语义：关系在框架中解释，参与者具有框架相对的角色"],
+      "sources": [{"title": "Baker, Fillmore & Lowe (1998), The Berkeley FrameNet Project", "url": "https://aclanthology.org/P98-1013/"}],
+      "adaptation": "角色和医疗计算关系由本项目定义；不声称FrameNet已经提供这些关系或中文多文档绑定算法。"
+    },
+    {
+      "id": "context_fidelity",
+      "name": "语境保真",
+      "requirement": "主体、对象、状态时间、场景、来源版本、意图和执行状态必须保留；相关字段不能拼接成来源中不存在的方案。",
+      "question": "这项属性属于谁、何时、哪个场景或方案？描述的是建议、医嘱、计划，还是实际状态？",
+      "boundary": "跨语境比较本身可以合法，例如比较实际值和推荐值；问题是丢失各自语境或混合不同记录。来源发布日期不是状态发生时间。",
+      "examples": ["用历史患者值填充当前模拟状态", "将医嘱已开立当成检查已完成", "拼接不同方案的剂量与频次"],
+      "theory": ["SNOMED CT显式语境：主体关系、时间、发现语境与操作语境", "FHIR工作流中的请求与事件分离"],
+      "sources": [
+        {"title": "SNOMED CT — Situation with Explicit Context Defining Attributes", "url": "https://docs.snomed.org/snomed-ct-specifications/snomed-ct-editorial-guide/readme/authoring/domain-specific-modeling/situation-with-explicit-context/situation-with-explicit-context-defining-attributes"},
+        {"title": "FHIR R5 — Workflow Resource Patterns", "url": "https://hl7.org/fhir/R5/workflow.html#patterns"}
+      ],
+      "adaptation": "来源版本、模拟场景及跨记录共同绑定是本项目的操作化扩展；不继承SNOMED的默认断言语境。"
+    },
+    {
+      "id": "logic_knowledge_fidelity",
+      "name": "逻辑与知识状态保真",
+      "requirement": "保留条件、否定作用域、AND/OR、比较边界以及证据确定或未确定的内容；查询不能成为前提。",
+      "question": "表达式是否增加、删除或改变了原文的条件和断言？是否把未确定的内容强行变成真或假？",
+      "boundary": "not_determined是合法答案，不是需要消除的错误。求解失败也不等于未知。规范不能直接变成实际行为事实。",
+      "examples": ["把若P则Q写成P已经发生", "未记录写成false", "将NOT(A AND B)改成NOT(A) AND NOT(B)", "把待判命题断言为来源事实"],
+      "theory": ["逻辑的组合语义和模型论蕴涵", "开放世界假设：缺少事实不蕴涵其否定", "Input/Output Logic启发的规范与事实分离"],
+      "sources": [
+        {"title": "W3C OWL 2 Primer — Basic Notions and Open-world Assumption", "url": "https://www.w3.org/TR/owl2-primer/"},
+        {"title": "Makinson & van der Torre (2000), Input/Output Logics", "url": "https://icr.uni.lu/leonvandertorre/papers/jpl00.pdf"}
+      ],
+      "adaptation": "采用现有Z3的证据蕴涵判定，不引入OWL运行时；规范适用仍使用现有语义库，不实现完整I/O逻辑。"
+    }
+  ]
+}

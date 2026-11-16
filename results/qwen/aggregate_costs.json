@@ -1,0 +1,314 @@
+{
+  "baseline": {
+    "event": "all_settings",
+    "arm": "baseline",
+    "planned": 2400,
+    "submitted": 2198,
+    "statuses": {
+      "submitted": 2198,
+      "total_request_limit": 182,
+      "blocked_actual_initial_not_submitted": 20
+    },
+    "content_source_macro_coverage_adjusted": {
+      "macro": 0.765076388888889,
+      "sources": 120,
+      "ci95": [
+        0.7283263888888889,
+        0.801486111111111
+      ]
+    },
+    "content_judgments_correct": 7899,
+    "judgments_submitted": 9500,
+    "judgments_planned": 10380,
+    "exact_content_packets": 1211,
+    "evidence_packets": 816,
+    "strict_packets": 522,
+    "actual_state_correct": 1844,
+    "readback_correct": 960,
+    "readback_applicable_submitted": 960,
+    "requests": 21618,
+    "tools": 21618,
+    "guard_rejections": 6273,
+    "unauthorized_attempts": 0,
+    "readback_consistent_but_saved_labels_wrong": 354,
+    "scoring_unit": "source cluster; branches/claims are correlated",
+    "changed": {
+      "correct": 1695,
+      "submitted_total": 2208,
+      "planned_total": 2400
+    },
+    "stable": {
+      "correct": 6204,
+      "submitted_total": 7292,
+      "planned_total": 7980
+    },
+    "protected_initial_correct": {
+      "correct": 6049,
+      "submitted_total": 6194
+    },
+    "initial_wrong_stable": {
+      "correct": 155,
+      "submitted_total": 1098
+    },
+    "six_directions": [
+      {
+        "from": "supported",
+        "to": "refuted",
+        "items_planned": 600,
+        "macro": 0.5733333333333334,
+        "sources": 60,
+        "ci95": [
+          0.4716666666666667,
+          0.6733333333333333
+        ]
+      },
+      {
+        "from": "supported",
+        "to": "not_determined",
+        "items_planned": 300,
+        "macro": 0.8266666666666667,
+        "sources": 30,
+        "ci95": [
+          0.7200000000000001,
+          0.9166666666666666
+        ]
+      },
+      {
+        "from": "refuted",
+        "to": "supported",
+        "items_planned": 600,
+        "macro": 0.6866666666666668,
+        "sources": 60,
+        "ci95": [
+          0.5966666666666666,
+          0.775
+        ]
+      },
+      {
+        "from": "refuted",
+        "to": "not_determined",
+        "items_planned": 300,
+        "macro": 0.92,
+        "sources": 30,
+        "ci95": [
+          0.8666666666666667,
+          0.9666666666666667
+        ]
+      },
+      {
+        "from": "not_determined",
+        "to": "supported",
+        "items_planned": 300,
+        "macro": 0.7733333333333333,
+        "sources": 30,
+        "ci95": [
+          0.6566666666666666,
+          0.8733333333333333
+        ]
+      },
+      {
+        "from": "not_determined",
+        "to": "refuted",
+        "items_planned": 300,
+        "macro": 0.61,
+        "sources": 30,
+        "ci95": [
+          0.48000000000000004,
+          0.7366666666666667
+        ]
+      }
+    ],
+    "M": 76.50763888888889,
+    "M_ci95": [
+      72.8326388888889,
+      80.1486111111111
+    ],
+    "E": 816,
+    "J": 522,
+    "sources": 120,
+    "usage": {
+      "input_tokens": 203724553,
+      "output_tokens": 3788639,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 0
+    },
+    "usage_rows_missing": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "prompt_cache_hit_tokens": 2380,
+      "prompt_cache_miss_tokens": 2380
+    },
+    "usage_requests_missing": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "prompt_cache_hit_tokens": 21618,
+      "prompt_cache_miss_tokens": 21618
+    },
+    "usage_complete": false,
+    "phase_seconds": {
+      "median": 70.90628552646376,
+      "p95": 827.868613082915,
+      "observed_phases": 2400,
+      "missing_phases": 0,
+      "population": "all recorded phases, including failed and blocked phases",
+      "percentile_method": "linear interpolation at (n - 1) * p"
+    }
+  },
+  "formalization": {
+    "event": "all_settings",
+    "arm": "formalization",
+    "planned": 2400,
+    "submitted": 2196,
+    "statuses": {
+      "submitted": 2196,
+      "total_request_limit": 172,
+      "api_http_400": 11,
+      "indeterminate_transport_URLError": 1,
+      "blocked_actual_initial_not_submitted": 20
+    },
+    "content_source_macro_coverage_adjusted": {
+      "macro": 0.8344791666666667,
+      "sources": 120,
+      "ci95": [
+        0.7977708333333333,
+        0.8691527777777778
+      ]
+    },
+    "content_judgments_correct": 8537,
+    "judgments_submitted": 9402,
+    "judgments_planned": 10380,
+    "exact_content_packets": 1654,
+    "evidence_packets": 1219,
+    "strict_packets": 1021,
+    "actual_state_correct": 1975,
+    "readback_correct": 950,
+    "readback_applicable_submitted": 950,
+    "requests": 21877,
+    "tools": 16551,
+    "guard_rejections": 104,
+    "unauthorized_attempts": 0,
+    "readback_consistent_but_saved_labels_wrong": 221,
+    "scoring_unit": "source cluster; branches/claims are correlated",
+    "changed": {
+      "correct": 1965,
+      "submitted_total": 2188,
+      "planned_total": 2400
+    },
+    "stable": {
+      "correct": 6572,
+      "submitted_total": 7214,
+      "planned_total": 7980
+    },
+    "protected_initial_correct": {
+      "correct": 5862,
+      "submitted_total": 6110
+    },
+    "initial_wrong_stable": {
+      "correct": 710,
+      "submitted_total": 1104
+    },
+    "six_directions": [
+      {
+        "from": "supported",
+        "to": "refuted",
+        "items_planned": 600,
+        "macro": 0.8333333333333334,
+        "sources": 60,
+        "ci95": [
+          0.755,
+          0.9033333333333334
+        ]
+      },
+      {
+        "from": "supported",
+        "to": "not_determined",
+        "items_planned": 300,
+        "macro": 0.9,
+        "sources": 30,
+        "ci95": [
+          0.8166666666666667,
+          0.9666666666666667
+        ]
+      },
+      {
+        "from": "refuted",
+        "to": "supported",
+        "items_planned": 600,
+        "macro": 0.7133333333333333,
+        "sources": 60,
+        "ci95": [
+          0.615,
+          0.81
+        ]
+      },
+      {
+        "from": "refuted",
+        "to": "not_determined",
+        "items_planned": 300,
+        "macro": 0.8833333333333333,
+        "sources": 30,
+        "ci95": [
+          0.7933333333333333,
+          0.9566666666666667
+        ]
+      },
+      {
+        "from": "not_determined",
+        "to": "supported",
+        "items_planned": 300,
+        "macro": 0.8200000000000001,
+        "sources": 30,
+        "ci95": [
+          0.7100000000000001,
+          0.9166666666666666
+        ]
+      },
+      {
+        "from": "not_determined",
+        "to": "refuted",
+        "items_planned": 300,
+        "macro": 0.8533333333333334,
+        "sources": 30,
+        "ci95": [
+          0.7533333333333334,
+          0.9366666666666668
+        ]
+      }
+    ],
+    "M": 83.44791666666667,
+    "M_ci95": [
+      79.77708333333334,
+      86.91527777777777
+    ],
+    "E": 1219,
+    "J": 1021,
+    "sources": 120,
+    "usage": {
+      "input_tokens": 257558401,
+      "output_tokens": 11608718,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 0
+    },
+    "usage_rows_missing": {
+      "input_tokens": 12,
+      "output_tokens": 12,
+      "prompt_cache_hit_tokens": 2380,
+      "prompt_cache_miss_tokens": 2380
+    },
+    "usage_requests_missing": {
+      "input_tokens": 12,
+      "output_tokens": 12,
+      "prompt_cache_hit_tokens": 21877,
+      "prompt_cache_miss_tokens": 21877
+    },
+    "usage_complete": false,
+    "phase_seconds": {
+      "median": 164.5034417869756,
+      "p95": 619.6966395439207,
+      "observed_phases": 2400,
+      "missing_phases": 0,
+      "population": "all recorded phases, including failed and blocked phases",
+      "percentile_method": "linear interpolation at (n - 1) * p"
+    }
+  }
+}

@@ -1,0 +1,2381 @@
+{
+  "prepared_utc": "2026-11-16T03:46:57.535038+00:00",
+  "prepared_epoch": 1794800817.5350304,
+  "source_ids": [
+    "S000579",
+    "S000884",
+    "C15D2126fb9bcbb4",
+    "S000087",
+    "S000269",
+    "S000669",
+    "C15D37a8098967c3",
+    "S000650",
+    "S000068",
+    "S000609",
+    "S000903",
+    "S000056"
+  ],
+  "phase_count": 384,
+  "phases": [
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000579/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000579/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000579/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000579/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000579/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000579/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000579/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000579/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000579/single_definite__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000579/single_definite__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000579/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000579/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000579/single_definite__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000579/single_definite__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000579/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000579/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000579/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000579/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000579/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000579/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000579/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000579/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000579/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000579/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000579/neutral__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000579/neutral__fresh"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000579/neutral__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000579/neutral__labels_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000579/neutral__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000579/neutral__index_only"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000579/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000579",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000579/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000884/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000884/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000884/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000884/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000884/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000884/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000884/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000884/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000884/single_definite__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000884/single_definite__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000884/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000884/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000884/single_definite__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000884/single_definite__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000884/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000884/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000884/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000884/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000884/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000884/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000884/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000884/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000884/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000884/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000884/neutral__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000884/neutral__fresh"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000884/neutral__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000884/neutral__labels_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000884/neutral__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000884/neutral__index_only"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000884/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000884",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000884/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D2126fb9bcbb4/key_mixed__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D2126fb9bcbb4/key_mixed__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D2126fb9bcbb4/key_mixed__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D2126fb9bcbb4/key_mixed__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D2126fb9bcbb4/key_mixed__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D2126fb9bcbb4/key_mixed__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D2126fb9bcbb4/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D2126fb9bcbb4/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D2126fb9bcbb4/single_definite__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D2126fb9bcbb4/single_definite__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D2126fb9bcbb4/single_definite__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D2126fb9bcbb4/single_definite__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D2126fb9bcbb4/single_definite__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D2126fb9bcbb4/single_definite__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D2126fb9bcbb4/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D2126fb9bcbb4/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D2126fb9bcbb4/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D2126fb9bcbb4/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D2126fb9bcbb4/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D2126fb9bcbb4/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D2126fb9bcbb4/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D2126fb9bcbb4/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D2126fb9bcbb4/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D2126fb9bcbb4/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D2126fb9bcbb4/neutral__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D2126fb9bcbb4/neutral__fresh"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D2126fb9bcbb4/neutral__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D2126fb9bcbb4/neutral__labels_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D2126fb9bcbb4/neutral__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D2126fb9bcbb4/neutral__index_only"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D2126fb9bcbb4/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "C15D2126fb9bcbb4",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D2126fb9bcbb4/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000087/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000087/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000087/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000087/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000087/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000087/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000087/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000087/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000087/single_definite__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000087/single_definite__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000087/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000087/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000087/single_definite__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000087/single_definite__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000087/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000087/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000087/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000087/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000087/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000087/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000087/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000087/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000087/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000087/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000087/neutral__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000087/neutral__fresh"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000087/neutral__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000087/neutral__labels_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000087/neutral__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000087/neutral__index_only"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000087/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000087",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000087/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000269/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000269/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000269/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000269/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000269/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000269/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000269/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000269/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000269/single_definite__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000269/single_definite__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000269/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000269/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000269/single_definite__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000269/single_definite__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000269/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000269/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000269/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000269/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000269/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000269/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000269/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000269/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000269/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000269/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000269/neutral__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000269/neutral__fresh"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000269/neutral__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000269/neutral__labels_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000269/neutral__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000269/neutral__index_only"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000269/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000269",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000269/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000669/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000669/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000669/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000669/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000669/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000669/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000669/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000669/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000669/single_definite__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000669/single_definite__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000669/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000669/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000669/single_definite__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000669/single_definite__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000669/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000669/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000669/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000669/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000669/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000669/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000669/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000669/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000669/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000669/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000669/neutral__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000669/neutral__fresh"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000669/neutral__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000669/neutral__labels_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000669/neutral__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000669/neutral__index_only"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000669/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000669",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000669/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D37a8098967c3/key_mixed__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D37a8098967c3/key_mixed__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D37a8098967c3/key_mixed__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D37a8098967c3/key_mixed__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D37a8098967c3/key_mixed__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D37a8098967c3/key_mixed__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D37a8098967c3/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D37a8098967c3/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D37a8098967c3/single_definite__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D37a8098967c3/single_definite__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D37a8098967c3/single_definite__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D37a8098967c3/single_definite__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D37a8098967c3/single_definite__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D37a8098967c3/single_definite__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D37a8098967c3/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D37a8098967c3/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D37a8098967c3/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D37a8098967c3/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D37a8098967c3/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D37a8098967c3/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D37a8098967c3/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D37a8098967c3/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D37a8098967c3/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D37a8098967c3/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/C15D37a8098967c3/neutral__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/C15D37a8098967c3/neutral__fresh"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/C15D37a8098967c3/neutral__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/C15D37a8098967c3/neutral__labels_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/C15D37a8098967c3/neutral__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/C15D37a8098967c3/neutral__index_only"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/C15D37a8098967c3/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "C15D37a8098967c3",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/C15D37a8098967c3/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000650/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000650/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000650/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000650/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000650/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000650/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000650/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000650/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000650/single_definite__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000650/single_definite__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000650/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000650/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000650/single_definite__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000650/single_definite__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000650/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000650/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000650/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000650/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000650/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000650/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000650/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000650/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000650/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000650/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000650/neutral__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000650/neutral__fresh"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000650/neutral__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000650/neutral__labels_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000650/neutral__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000650/neutral__index_only"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000650/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000650",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000650/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000068/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000068/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000068/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000068/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000068/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000068/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000068/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000068/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000068/single_definite__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000068/single_definite__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000068/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000068/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000068/single_definite__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000068/single_definite__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000068/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000068/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000068/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000068/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000068/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000068/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000068/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000068/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000068/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000068/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000068/neutral__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000068/neutral__fresh"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000068/neutral__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000068/neutral__labels_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000068/neutral__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000068/neutral__index_only"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000068/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000068",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000068/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000609/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000609/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000609/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000609/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000609/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000609/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000609/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000609/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000609/single_definite__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000609/single_definite__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000609/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000609/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000609/single_definite__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000609/single_definite__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000609/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000609/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000609/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000609/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000609/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000609/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000609/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000609/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000609/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000609/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000609/neutral__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000609/neutral__fresh"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000609/neutral__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000609/neutral__labels_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000609/neutral__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000609/neutral__index_only"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000609/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000609",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000609/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000903/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000903/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000903/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000903/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000903/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000903/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000903/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000903/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000903/single_definite__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000903/single_definite__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000903/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000903/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000903/single_definite__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000903/single_definite__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000903/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000903/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000903/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000903/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000903/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000903/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000903/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000903/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000903/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000903/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000903/neutral__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000903/neutral__fresh"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000903/neutral__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000903/neutral__labels_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000903/neutral__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000903/neutral__index_only"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000903/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000903",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000903/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000056/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000056/key_mixed__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000056/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000056/key_mixed__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000056/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000056/key_mixed__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000056/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "key_mixed",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000056/key_mixed__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000056/single_definite__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000056/single_definite__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000056/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000056/single_definite__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000056/single_definite__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000056/single_definite__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000056/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_definite",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000056/single_definite__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000056/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000056/single_uncertainty__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000056/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000056/single_uncertainty__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000056/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000056/single_uncertainty__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000056/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "single_uncertainty",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000056/single_uncertainty__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "fresh__baseline",
+      "relative_path": "fresh__baseline/phases/S000056/neutral__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "fresh__formalization",
+      "relative_path": "fresh__formalization/phases/S000056/neutral__fresh"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "labels__baseline",
+      "relative_path": "labels__baseline/phases/S000056/neutral__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "labels__formalization",
+      "relative_path": "labels__formalization/phases/S000056/neutral__labels_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "index__baseline",
+      "relative_path": "index__baseline/phases/S000056/neutral__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "index__formalization",
+      "relative_path": "index__formalization/phases/S000056/neutral__index_only"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "index_guard__baseline",
+      "relative_path": "index_guard__baseline/phases/S000056/neutral__evidence_constraint"
+    },
+    {
+      "source_id": "S000056",
+      "event_id": "neutral",
+      "arm": "index_guard__formalization",
+      "relative_path": "index_guard__formalization/phases/S000056/neutral__evidence_constraint"
+    }
+  ],
+  "from_endpoint": "http://127.0.0.1:18228/v1",
+  "to_endpoint": "http://127.0.0.1:18227/v1",
+  "workers": 12,
+  "selection": "Last untouched source blocks in the existing initial-result queue order; no outcomes used",
+  "source_endpoint_overrides": {
+    "S000579": "http://127.0.0.1:18227/v1",
+    "S000884": "http://127.0.0.1:18227/v1",
+    "C15D2126fb9bcbb4": "http://127.0.0.1:18227/v1",
+    "S000087": "http://127.0.0.1:18227/v1",
+    "S000269": "http://127.0.0.1:18227/v1",
+    "S000669": "http://127.0.0.1:18227/v1",
+    "C15D37a8098967c3": "http://127.0.0.1:18227/v1",
+    "S000650": "http://127.0.0.1:18227/v1",
+    "S000068": "http://127.0.0.1:18227/v1",
+    "S000609": "http://127.0.0.1:18227/v1",
+    "S000903": "http://127.0.0.1:18227/v1",
+    "S000056": "http://127.0.0.1:18227/v1"
+  },
+  "all_selected_sources_unstarted_before_reservation": true,
+  "existing_wire_files_count": 27912,
+  "config_before_sha256": "80f0823be2aeefd358cbca39e06a99d4d81e02cbc77ccd1c608421799eaee2b3",
+  "rows_before_sha256": "228e57c255f71948a84b5bc3ca26810bcc92c0f60fe15cf28a85fcf7724900bb",
+  "helper_sha256": "50295922cc1821f5d8a54220851bb2a8d8d084e03ff9c73ba951e1e4a5225d7c",
+  "active_requests_interrupted": 0,
+  "inference_and_budget_unchanged": true,
+  "handoff": "Terminal checkpoint future; original scheduler is sole main-results writer",
+  "prepared_epoch_by_source": {
+    "S000579": 1794800817.5350304,
+    "S000884": 1794800817.5350304,
+    "C15D2126fb9bcbb4": 1794800817.5350304,
+    "S000087": 1794800817.5350304,
+    "S000269": 1794800817.5350304,
+    "S000669": 1794800817.5350304,
+    "C15D37a8098967c3": 1794800817.5350304,
+    "S000650": 1794800817.5350304,
+    "S000068": 1794800817.5350304,
+    "S000609": 1794800817.5350304,
+    "S000903": 1794804364.6565964,
+    "S000056": 1794804364.6565964
+  },
+  "extension_history": [
+    {
+      "utc": "2026-11-16T04:46:04.656603+00:00",
+      "epoch": 1794804364.6565964,
+      "source_ids": [
+        "S000903",
+        "S000056"
+      ],
+      "phases": 64,
+      "all_unstarted": true,
+      "active_model_requests_interrupted": 0,
+      "previous_manifest_sha256": "274c06dde5de5a456e742bcf57d0d4db86908582b3ad2c5ecf1751041926e82f",
+      "previous_worker_status_sha256": "a405586c9d3e94ce19381e50cb4b7d2746ab779ae08f854104b94314cc8133c0",
+      "reason": "Fast replica completed its first block; transfer the last untouched source blocks"
+    }
+  ]
+}

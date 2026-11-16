@@ -1,0 +1,489 @@
+{
+  "version": 2,
+  "description": "供上下文选义与证据绑定使用的通用语义定义；展开到现有 record_solver 表达式。",
+  "types": {
+    "Identity": "已在同一命名空间中对齐的对象标识，底层为 String；定义自身不做别名推断。",
+    "Number": "Int 或 Real 数值表达式；参与比较的量须具有相同单位和计量口径。",
+    "Bool": "布尔表达式；其真值可以因事实不足而未确定。",
+    "Comparison": "枚举：eq、lt、le、gt、ge，分别为等于、小于、不大于、大于、不小于。",
+    "List[T]": "显式枚举的有限表达式列表，不是缺失信息的占位符。",
+    "DirectiveKind": "规范意图枚举：prohibition禁用、recommendation建议、order医嘱要求、caution慎用、permission明确允许。均不等于实际执行。"
+  },
+  "binding_semantics": {
+    "evidence": "参数绑定到已读取的原文记录字段；身份、时间、模态及适用场景由绑定阶段解释，展开器不替模型判断。",
+    "unknown": "未知值放在有类型的记录字段中，用 null 或字段缺省表示；查询通过 ref 读取。表达式参数不使用字面量 null，不添加 x != null。",
+    "query": "定义调用默认表达待核对命题；展开本身不将命题加入已知事实。",
+    "composition": "定义可组合，并可与现有算术、逻辑表达式一起使用。每个被比较的角色保留自己的引用。",
+    "directives": "条件性规范以rules中的modality/when/action表示，独立于事实蕴涵expr。条件从所指主体和场景的实际记录读取；规范不成为实际行为事实，不逆推条件，也不作默认许可。"
+  },
+  "definitions": [
+    {
+      "id": "object_match",
+      "name": "对象身份相同",
+      "meaning": "比较待核对对象与指定参照对象是否为同一身份。",
+      "parameters": {
+        "actual": {
+          "type": "Identity",
+          "role": "题目要求核对的对象身份，例如当前实际使用的品种。"
+        },
+        "reference": {
+          "type": "Identity",
+          "role": "题目指定的参照身份，例如适用医嘱指定的品种。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "题目指定唯一参照对象时使用；参照为多个允许对象时用 member_of。",
+      "assumptions": [
+        "两侧身份来自各自的证据角色；相同拼写、药理类别相同或文本相似不能代替身份对齐。"
+      ],
+      "formula": "actual = reference",
+      "expansion": [
+        "eq",
+        {
+          "param": "actual"
+        },
+        {
+          "param": "reference"
+        }
+      ]
+    },
+    {
+      "id": "member_of",
+      "name": "对象属于允许集合",
+      "meaning": "待核对对象是参照允许集合中的至少一个成员。",
+      "parameters": {
+        "actual": {
+          "type": "Identity",
+          "role": "当前待核对的对象身份。"
+        },
+        "allowed": {
+          "type": "List[Identity]",
+          "role": "适用来源明确限定的完整允许集合，各成员可引用不同的来源记录。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "用于品种属于推荐选项等成员关系，不用于数量区间或药物效果相似。",
+      "assumptions": [
+        "有限枚举必须覆盖题目指定的集合；仅检索到部分选项不能当成完整集合。",
+        "[] 表示明确的空集合，结果为 false；未取得集合信息不能写成 []。"
+      ],
+      "formula": "OR(actual = candidate for candidate in allowed)",
+      "expansion": [
+        "or",
+        {
+          "each": "allowed",
+          "as": "candidate",
+          "body": [
+            "eq",
+            {
+              "param": "actual"
+            },
+            {
+              "param": "candidate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "within_closed_interval",
+      "name": "数值位于闭区间",
+      "meaning": "实际值不低于下界且不高于上界，包含两个端点。",
+      "parameters": {
+        "value": {
+          "type": "Number",
+          "role": "当前待核对的实际数值。"
+        },
+        "lower": {
+          "type": "Number",
+          "role": "适用参照中明确给出的下界。"
+        },
+        "upper": {
+          "type": "Number",
+          "role": "同一参照中明确给出的上界。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "适用于包含端点的范围；固定参照值 v 用 [v,v]。单侧或严格边界用 numeric_compare 组合。",
+      "assumptions": [
+        "单位相同，下界不大于上界；两端来自同一个适用方案。缺失的端点保留未知，不补成0。"
+      ],
+      "formula": "lower <= value AND value <= upper",
+      "expansion": [
+        "and",
+        [
+          "ge",
+          {
+            "param": "value"
+          },
+          {
+            "param": "lower"
+          }
+        ],
+        [
+          "le",
+          {
+            "param": "value"
+          },
+          {
+            "param": "upper"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "numeric_compare",
+      "name": "数值与阈值比较",
+      "meaning": "保留原句指定的严格或非严格比较方向，对数值与阈值进行一次比较。",
+      "parameters": {
+        "value": {
+          "type": "Number",
+          "role": "待核对的数值，可为算术计算结果。"
+        },
+        "threshold": {
+          "type": "Number",
+          "role": "题目或适用来源指定的阈值。"
+        },
+        "operator": {
+          "type": "Comparison",
+          "values": [
+            "eq",
+            "lt",
+            "le",
+            "gt",
+            "ge"
+          ],
+          "role": "分别表示等于、小于、不大于、大于、不小于；由原句决定。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "区分超过与达到、低于与不超过。开放区间可由两个严格比较组合。",
+      "assumptions": [
+        "数值与阈值的单位、对象及时间口径相容。"
+      ],
+      "formula": "value operator threshold",
+      "expansion": [
+        {
+          "param": "operator"
+        },
+        {
+          "param": "value"
+        },
+        {
+          "param": "threshold"
+        }
+      ]
+    },
+    {
+      "id": "daily_total",
+      "name": "按单次量和日频次计算名义日总量",
+      "meaning": "将同一方案或执行记录的单次量与每日次数相乘，得到相应的名义日总量。",
+      "parameters": {
+        "per_event": {
+          "type": "Number",
+          "role": "同一对象、同一方案或执行记录的每次使用量。"
+        },
+        "events_per_day": {
+          "type": "Number",
+          "role": "该方案或执行记录的每日次数，已统一为次/日。"
+        }
+      },
+      "returns": "Number",
+      "selection_hint": "只在题目要求计算日合计量时使用；结果还需与某参照比较才构成可判真的查询。",
+      "assumptions": [
+        "两个参数属于同一个对象、时间范围和模态，不混用不同方案的量和频次。",
+        "按需服用、隔日用药和变动频次不能无依据地转换为实际每日次数。建议方案的乘积仍是建议总量，不证明已经执行。"
+      ],
+      "formula": "per_event * events_per_day",
+      "expansion": [
+        "mul",
+        {
+          "param": "per_event"
+        },
+        {
+          "param": "events_per_day"
+        }
+      ]
+    },
+    {
+      "id": "dose_frequency_in_range",
+      "name": "单次量和频次分别符合参照",
+      "meaning": "实际单次量与实际日频次分别处于同一参照方案的对应区间内。",
+      "parameters": {
+        "actual_dose": {
+          "type": "Number",
+          "role": "当前实际单次使用量。"
+        },
+        "actual_frequency": {
+          "type": "Number",
+          "role": "当前实际每日次数。"
+        },
+        "dose_lower": {
+          "type": "Number",
+          "role": "参照方案的单次量下界。"
+        },
+        "dose_upper": {
+          "type": "Number",
+          "role": "同一参照方案的单次量上界。"
+        },
+        "frequency_lower": {
+          "type": "Number",
+          "role": "同一参照方案的日频次下界。"
+        },
+        "frequency_upper": {
+          "type": "Number",
+          "role": "同一参照方案的日频次上界。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "原句明确要求单次量、次数分别符合时使用；日总量相同不能代替这两个条件。",
+      "assumptions": [
+        "量和频次使用各自一致的单位；同一方案的边界共享一个引用。"
+      ],
+      "formula": "within_closed_interval(actual_dose, dose_lower, dose_upper) AND within_closed_interval(actual_frequency, frequency_lower, frequency_upper)",
+      "expansion": [
+        "and",
+        {
+          "definition": "within_closed_interval",
+          "arguments": {
+            "value": {
+              "param": "actual_dose"
+            },
+            "lower": {
+              "param": "dose_lower"
+            },
+            "upper": {
+              "param": "dose_upper"
+            }
+          }
+        },
+        {
+          "definition": "within_closed_interval",
+          "arguments": {
+            "value": {
+              "param": "actual_frequency"
+            },
+            "lower": {
+              "param": "frequency_lower"
+            },
+            "upper": {
+              "param": "frequency_upper"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "daily_total_in_range",
+      "name": "日总量符合参照乘积区间",
+      "meaning": "实际日总量位于参照单次量区间与日频次区间相乘所得的名义日总量区间内。",
+      "parameters": {
+        "actual_total": {
+          "type": "Number",
+          "role": "直接记录的实际日总量，或从同一实际记录调用 daily_total 得到的值。"
+        },
+        "dose_lower": {
+          "type": "Number",
+          "role": "参照方案的单次量下界。"
+        },
+        "dose_upper": {
+          "type": "Number",
+          "role": "同一参照方案的单次量上界。"
+        },
+        "frequency_lower": {
+          "type": "Number",
+          "role": "同一参照方案的日频次下界。"
+        },
+        "frequency_upper": {
+          "type": "Number",
+          "role": "同一参照方案的日频次上界。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "仅判断题干要求的名义日总量，不同时断言单次量与频次分别合规。",
+      "assumptions": [
+        "参照量和频次非负，区间有序，单位一致；适用原文允许按两区间乘积定义参照日总量。"
+      ],
+      "formula": "dose_lower * frequency_lower <= actual_total AND actual_total <= dose_upper * frequency_upper",
+      "expansion": {
+        "definition": "within_closed_interval",
+        "arguments": {
+          "value": {
+            "param": "actual_total"
+          },
+          "lower": {
+            "definition": "daily_total",
+            "arguments": {
+              "per_event": {
+                "param": "dose_lower"
+              },
+              "events_per_day": {
+                "param": "frequency_lower"
+              }
+            }
+          },
+          "upper": {
+            "definition": "daily_total",
+            "arguments": {
+              "per_event": {
+                "param": "dose_upper"
+              },
+              "events_per_day": {
+                "param": "frequency_upper"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "event_completed",
+      "name": "指定事件已经完成",
+      "meaning": "核对所指事件的实际执行状态是否为已经完成。",
+      "parameters": {
+        "completed": {
+          "type": "Bool",
+          "role": "所指主体、事件与时间范围的实际完成状态；来自完成记录或明确的执行陈述。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "用于已完成检查、已实施操作等。建议、预约、授权或计划状态不能充当实际完成状态。",
+      "assumptions": [
+        "绑定阶段已经定位到正确事件；找不到完成信息时使用未知的完成字段，不填 false。"
+      ],
+      "formula": "completed = true",
+      "expansion": [
+        "eq",
+        {
+          "param": "completed"
+        },
+        true
+      ]
+    },
+    {
+      "id": "negate",
+      "name": "否定指定命题",
+      "meaning": "对参数所表示的完整命题取逻辑否定。",
+      "parameters": {
+        "condition": {
+          "type": "Bool",
+          "role": "原句否定词实际作用的命题；保留否定的作用域。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "否定作用于哪部分由原句决定；NOT(A AND B)与NOT(A) AND B不同。",
+      "assumptions": [
+        "未记录某事不等于该事未发生；未知命题及其否定都可能是not_determined。"
+      ],
+      "formula": "NOT condition",
+      "expansion": [
+        "not",
+        {
+          "param": "condition"
+        }
+      ]
+    },
+    {
+      "id": "all_of",
+      "name": "所有条件成立",
+      "meaning": "题目要求的各项条件同时成立。",
+      "parameters": {
+        "conditions": {
+          "type": "List[Bool]",
+          "role": "原句中全部并列必要条件；未确定的条件也保留。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "用于且、同时、分别满足等合取关系；未知条件不应被删除。",
+      "assumptions": [
+        "列表准确表达题干的条件范围。显式空合取为true，不能用空列表表示解析遗漏。"
+      ],
+      "formula": "AND(conditions)",
+      "expansion": [
+        "and",
+        {
+          "spread": "conditions"
+        }
+      ]
+    },
+    {
+      "id": "any_of",
+      "name": "至少一个条件成立",
+      "meaning": "题目列出的条件中至少一个成立，允许多个条件同时成立。",
+      "parameters": {
+        "conditions": {
+          "type": "List[Bool]",
+          "role": "原句明确列出的备选条件。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "用于或、至少一项等非排他析取；不是恰好一个成立。",
+      "assumptions": [
+        "列表准确表达题干列出的选项。显式空析取为false，不能用空列表表示未知选项。"
+      ],
+      "formula": "OR(conditions)",
+      "expansion": [
+        "or",
+        {
+          "spread": "conditions"
+        }
+      ]
+    },
+    {
+      "id": "directive_active",
+      "name": "指定来源规范在当前条件下适用",
+      "meaning": "查询所指来源规范的意图种类是否匹配，并且该规范的适用条件在当前场景成立。只表示该条规范的适用性，不断言行为已经或没有发生。",
+      "parameters": {
+        "condition": {
+          "type": "Bool",
+          "role": "条件在所指主体、时间和场景的实际状态中是否成立，未知保留未知。"
+        },
+        "source_modality": {
+          "type": "DirectiveKind",
+          "values": [
+            "prohibition",
+            "recommendation",
+            "order",
+            "caution",
+            "permission"
+          ],
+          "role": "已读取原文规定的意图类型。"
+        },
+        "queried_modality": {
+          "type": "DirectiveKind",
+          "values": [
+            "prohibition",
+            "recommendation",
+            "order",
+            "caution",
+            "permission"
+          ],
+          "role": "当前命题询问的意图类型。"
+        }
+      },
+      "returns": "Bool",
+      "selection_hint": "先从来源抽取规则的条件、动作和意图，再用directive_applies(rule_id,modality)询问该条规则在当前场景是否适用。",
+      "assumptions": [
+        "规范本身有本轮原文依据；条件字段不因规则提到它就被设为true。",
+        "不适用一条禁令不等于全局允许；NOT只否定所指规范在本场景的适用性。",
+        "prohibition/recommendation/order/caution/permission彼此不自动推导；建议与实际执行分别判断。"
+      ],
+      "formula": "(source_modality = queried_modality) AND condition",
+      "expansion": [
+        "and",
+        [
+          "eq",
+          {
+            "param": "source_modality"
+          },
+          {
+            "param": "queried_modality"
+          }
+        ],
+        {
+          "param": "condition"
+        }
+      ]
+    }
+  ]
+}

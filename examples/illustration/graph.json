@@ -1,0 +1,163 @@
+{
+  "properties": [
+    {
+      "name": "object_id",
+      "type": "String",
+      "semantic_type": "Identity"
+    },
+    {
+      "name": "dose",
+      "type": "Real",
+      "semantic_type": "Dose",
+      "unit": "mL"
+    },
+    {
+      "name": "dose_lower",
+      "type": "Real",
+      "semantic_type": "Dose",
+      "unit": "mL"
+    },
+    {
+      "name": "dose_upper",
+      "type": "Real",
+      "semantic_type": "Dose",
+      "unit": "mL"
+    },
+    {
+      "name": "frequency",
+      "type": "Real",
+      "semantic_type": "Frequency",
+      "unit": "1/d"
+    },
+    {
+      "name": "frequency_lower",
+      "type": "Real",
+      "semantic_type": "Frequency",
+      "unit": "1/d"
+    },
+    {
+      "name": "frequency_upper",
+      "type": "Real",
+      "semantic_type": "Frequency",
+      "unit": "1/d"
+    }
+  ],
+  "records": [
+    {
+      "id": "r_old",
+      "kind": "regimen",
+      "subject": "P",
+      "time": "past",
+      "modality": "actual",
+      "scenario": "visit",
+      "document_id": "r_old",
+      "anchor_id": "r_old_1",
+      "fields": {
+        "object_id": "Drug X",
+        "dose": 5,
+        "frequency": 2
+      },
+      "sources": [
+        {
+          "document_id": "r_old",
+          "location": "r_old_1",
+          "quote": "此前实际用药：药品X，每次5mL，每日2次。"
+        }
+      ]
+    },
+    {
+      "id": "r_order",
+      "kind": "regimen",
+      "subject": "P",
+      "time": "current",
+      "modality": "order",
+      "scenario": "visit",
+      "document_id": "r_order",
+      "anchor_id": "r_order_1",
+      "fields": {
+        "object_id": "Drug X",
+        "dose_lower": 5,
+        "dose_upper": 5,
+        "frequency_lower": 2,
+        "frequency_upper": 2
+      },
+      "sources": [
+        {
+          "document_id": "r_order",
+          "location": "r_order_1",
+          "quote": "本次医嘱：药品X，每次5mL，每日2次。"
+        }
+      ]
+    },
+    {
+      "id": "r_now",
+      "kind": "regimen",
+      "subject": "P",
+      "time": "current",
+      "modality": "actual",
+      "scenario": "visit",
+      "document_id": "r_now",
+      "anchor_id": "r_now_1",
+      "fields": {
+        "object_id": "Drug X",
+        "dose": 2.5,
+        "frequency": 4
+      },
+      "sources": [
+        {
+          "document_id": "r_now",
+          "location": "r_now_1",
+          "quote": "本次实际用药：药品X，每次2.5mL，每日4次。"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "obs",
+      "text": "患者P本次实际用药",
+      "where": {
+        "subject": "P",
+        "time": "current",
+        "scenario": "visit"
+      },
+      "slots": {},
+      "scores": {}
+    },
+    {
+      "id": "ref",
+      "text": "本次医嘱",
+      "where": {
+        "document_id": "r_order",
+        "anchor_id": "r_order_1"
+      },
+      "slots": {},
+      "scores": {}
+    }
+  ],
+  "rules": [],
+  "queries": [
+    {
+      "item_id": "Q1",
+      "text": "本次实际名义日总量符合本次医嘱",
+      "expr": {
+        "op": "daily_total_conforms",
+        "args": [
+          "obs",
+          "ref"
+        ]
+      }
+    },
+    {
+      "item_id": "Q2",
+      "text": "本次实际单次量和频次分别符合本次医嘱",
+      "expr": {
+        "op": "dose_frequency_conforms",
+        "args": [
+          "obs",
+          "ref"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Install in a separate Linux/CUDA environment; not needed for offline reproduction.
+# Recorded Qwen server versions (A100-SXM4-80GB).
+torch==2.10.0
+vllm==0.19.1
+transformers==5.20.1

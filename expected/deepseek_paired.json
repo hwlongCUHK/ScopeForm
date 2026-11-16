@@ -1,0 +1,202 @@
+[
+  {
+    "setting": "fresh",
+    "M": {
+      "delta_pp": 7.489583333333333,
+      "ci95_pp": [
+        3.888888888888889,
+        11.007031249999992
+      ],
+      "sources": 120,
+      "source_wins": 62,
+      "source_losses": 27,
+      "source_ties": 31,
+      "ci99_bonferroni5_pp": [
+        2.7048611111111116,
+        12.16668402777778
+      ]
+    },
+    "J": {
+      "delta_pp": 14.583333333333334,
+      "ci95_pp": [
+        8.333333333333334,
+        21.041666666666668
+      ],
+      "sources": 120,
+      "source_wins": 43,
+      "source_losses": 11,
+      "source_ties": 66
+    },
+    "E": {
+      "delta_pp": 3.9583333333333335,
+      "ci95_pp": [
+        1.875,
+        6.041666666666667
+      ],
+      "sources": 120,
+      "source_wins": 24,
+      "source_losses": 5,
+      "source_ties": 91
+    }
+  },
+  {
+    "setting": "labels",
+    "M": {
+      "delta_pp": 7.111111111111112,
+      "ci95_pp": [
+        3.763888888888889,
+        10.39236111111111
+      ],
+      "sources": 120,
+      "source_wins": 65,
+      "source_losses": 24,
+      "source_ties": 31,
+      "ci99_bonferroni5_pp": [
+        2.624982638888889,
+        11.340277777777777
+      ]
+    },
+    "J": {
+      "delta_pp": 15.625,
+      "ci95_pp": [
+        9.791666666666666,
+        21.46354166666621
+      ],
+      "sources": 120,
+      "source_wins": 42,
+      "source_losses": 8,
+      "source_ties": 70
+    },
+    "E": {
+      "delta_pp": 2.5,
+      "ci95_pp": [
+        0.0,
+        5.208333333333333
+      ],
+      "sources": 120,
+      "source_wins": 16,
+      "source_losses": 6,
+      "source_ties": 98
+    }
+  },
+  {
+    "setting": "index",
+    "M": {
+      "delta_pp": 4.423611111111112,
+      "ci95_pp": [
+        1.020659722222223,
+        7.795138888888888
+      ],
+      "sources": 120,
+      "source_wins": 49,
+      "source_losses": 31,
+      "source_ties": 40,
+      "ci99_bonferroni5_pp": [
+        -0.12154513888888879,
+        8.802083333333334
+      ]
+    },
+    "J": {
+      "delta_pp": 14.375,
+      "ci95_pp": [
+        8.75,
+        20.208333333333332
+      ],
+      "sources": 120,
+      "source_wins": 34,
+      "source_losses": 4,
+      "source_ties": 82
+    },
+    "E": {
+      "delta_pp": 1.4583333333333333,
+      "ci95_pp": [
+        -1.0416666666666667,
+        4.166666666666667
+      ],
+      "sources": 120,
+      "source_wins": 9,
+      "source_losses": 4,
+      "source_ties": 107
+    }
+  },
+  {
+    "setting": "guard",
+    "M": {
+      "delta_pp": 7.319444444444445,
+      "ci95_pp": [
+        4.083246527777778,
+        10.510416666666666
+      ],
+      "sources": 120,
+      "source_wins": 62,
+      "source_losses": 23,
+      "source_ties": 35,
+      "ci99_bonferroni5_pp": [
+        3.0243055555555554,
+        11.520885416666678
+      ]
+    },
+    "J": {
+      "delta_pp": 17.708333333333332,
+      "ci95_pp": [
+        11.458333333333334,
+        24.166666666666668
+      ],
+      "sources": 120,
+      "source_wins": 46,
+      "source_losses": 9,
+      "source_ties": 65
+    },
+    "E": {
+      "delta_pp": 0.4166666666666667,
+      "ci95_pp": [
+        -1.4583333333333333,
+        2.5
+      ],
+      "sources": 120,
+      "source_wins": 3,
+      "source_losses": 4,
+      "source_ties": 113
+    }
+  },
+  {
+    "setting": "index_guard",
+    "M": {
+      "delta_pp": 4.565972222222223,
+      "ci95_pp": [
+        1.1493055555555558,
+        7.927083333333333
+      ],
+      "sources": 120,
+      "source_wins": 52,
+      "source_losses": 23,
+      "source_ties": 45,
+      "ci99_bonferroni5_pp": [
+        0.13887152777777748,
+        9.010416666666666
+      ]
+    },
+    "J": {
+      "delta_pp": 15.208333333333334,
+      "ci95_pp": [
+        9.166666666666666,
+        21.458333333333332
+      ],
+      "sources": 120,
+      "source_wins": 42,
+      "source_losses": 11,
+      "source_ties": 67
+    },
+    "E": {
+      "delta_pp": 0.8333333333333334,
+      "ci95_pp": [
+        -1.0416666666666667,
+        3.125
+      ],
+      "sources": 120,
+      "source_wins": 3,
+      "source_losses": 2,
+      "source_ties": 115
+    }
+  }
+]

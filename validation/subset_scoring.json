@@ -1,0 +1,8 @@
+{
+  "sources": 1,
+  "rows": 9,
+  "matched_update_pairs": 4,
+  "initial_checkpoints_verified": 0,
+  "request_budget": 40,
+  "passed": true
+}

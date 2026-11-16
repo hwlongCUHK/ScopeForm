@@ -1,0 +1,73 @@
+{
+  "description": "人工构造的语义演示，不来自评测答案；数值仅用于逻辑演算。实际：对象乙，每次2单位、每日3次。参照：对象甲，每次3单位、每日2次。计划要求完成检查，但实际完成情况未记录。",
+  "properties": [
+    {"name": "object_id", "type": "String"},
+    {"name": "dose", "type": "Real"},
+    {"name": "frequency", "type": "Real"},
+    {"name": "completed", "type": "Bool"}
+  ],
+  "records": [
+    {"id": "current_regimen", "kind": "regimen", "entity": "subject", "time": "current", "modality": "actual", "scenario": "demo", "document_id": "current", "anchor_id": "regimen", "fields": {"object_id": "对象乙", "dose": 2, "frequency": 3}},
+    {"id": "advised_regimen", "kind": "regimen", "entity": "subject", "time": "current", "modality": "recommendation", "scenario": "demo", "document_id": "advice", "anchor_id": "regimen", "fields": {"object_id": "对象甲", "dose": 3, "frequency": 2}},
+    {"id": "actual_check", "kind": "event", "entity": "check", "time": "current", "modality": "actual", "scenario": "demo", "document_id": "current", "anchor_id": "check", "fields": {"completed": null}},
+    {"id": "check_plan", "kind": "event", "entity": "check", "time": "current", "modality": "plan", "scenario": "demo", "document_id": "advice", "anchor_id": "check", "fields": {"completed": true}}
+  ],
+  "rules": [],
+  "references": [
+    {"id": "actual", "text": "当前实际方案", "where": {"kind": "regimen", "time": "current", "modality": "actual"}, "scores": {}},
+    {"id": "advice", "text": "本题适用的参照方案", "where": {"kind": "regimen", "time": "current", "modality": "recommendation"}, "scores": {}},
+    {"id": "check", "text": "检查的实际完成状态", "where": {"kind": "event", "entity": "check", "time": "current", "modality": "actual"}, "scores": {}}
+  ],
+  "queries": [
+    {
+      "item_id": "object_match", "text": "实际对象与参照对象一致",
+      "expr": {"definition": "object_match", "arguments": {"actual": ["ref", "actual", "object_id"], "reference": ["ref", "advice", "object_id"]}}
+    },
+    {
+      "item_id": "membership", "text": "实际对象属于明确允许的对象甲、对象丙",
+      "expr": {"definition": "member_of", "arguments": {"actual": ["ref", "actual", "object_id"], "allowed": [["ref", "advice", "object_id"], "对象丙"]}}
+    },
+    {
+      "item_id": "dose_only", "text": "实际单次量符合固定参照单次量",
+      "expr": {"definition": "within_closed_interval", "arguments": {"value": ["ref", "actual", "dose"], "lower": ["ref", "advice", "dose"], "upper": ["ref", "advice", "dose"]}}
+    },
+    {
+      "item_id": "dose_and_frequency", "text": "实际单次量与频次分别符合参照",
+      "expr": {"definition": "dose_frequency_in_range", "arguments": {
+        "actual_dose": ["ref", "actual", "dose"], "actual_frequency": ["ref", "actual", "frequency"],
+        "dose_lower": ["ref", "advice", "dose"], "dose_upper": ["ref", "advice", "dose"],
+        "frequency_lower": ["ref", "advice", "frequency"], "frequency_upper": ["ref", "advice", "frequency"]
+      }}
+    },
+    {
+      "item_id": "daily_total", "text": "仅比较名义日总量是否符合参照",
+      "expr": {"definition": "daily_total_in_range", "arguments": {
+        "actual_total": {"definition": "daily_total", "arguments": {"per_event": ["ref", "actual", "dose"], "events_per_day": ["ref", "actual", "frequency"]}},
+        "dose_lower": ["ref", "advice", "dose"], "dose_upper": ["ref", "advice", "dose"],
+        "frequency_lower": ["ref", "advice", "frequency"], "frequency_upper": ["ref", "advice", "frequency"]
+      }}
+    },
+    {
+      "item_id": "check_completed", "text": "检查已经实际完成",
+      "expr": {"definition": "event_completed", "arguments": {"completed": ["ref", "check", "completed"]}}
+    },
+    {
+      "item_id": "check_not_completed", "text": "检查没有实际完成",
+      "expr": {"definition": "negate", "arguments": {"condition": {"definition": "event_completed", "arguments": {"completed": ["ref", "check", "completed"]}}}}
+    },
+    {
+      "item_id": "false_and_unknown", "text": "对象相同且检查完成",
+      "expr": {"definition": "all_of", "arguments": {"conditions": [
+        {"definition": "object_match", "arguments": {"actual": ["ref", "actual", "object_id"], "reference": ["ref", "advice", "object_id"]}},
+        {"definition": "event_completed", "arguments": {"completed": ["ref", "check", "completed"]}}
+      ]}}
+    },
+    {
+      "item_id": "true_or_unknown", "text": "实际单次量为2或者检查完成",
+      "expr": {"definition": "any_of", "arguments": {"conditions": [
+        {"definition": "numeric_compare", "arguments": {"value": ["ref", "actual", "dose"], "threshold": 2, "operator": "eq"}},
+        {"definition": "event_completed", "arguments": {"completed": ["ref", "check", "completed"]}}
+      ]}}
+    }
+  ]
+}
