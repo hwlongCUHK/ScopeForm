@@ -59,8 +59,8 @@ def qwen_client(baseline,out,key,endpoint):
     return QwenClient(key,endpoint)
 
 
-def initial_checkpoints(backbone,source_ids,dest):
-    with tarfile.open(ROOT/'artifacts'/backbone/'shared_initials.tar.gz','r:gz') as tar:
+def initial_checkpoints(archive,source_ids,dest):
+    with tarfile.open(archive,'r:gz') as tar:
         for member in tar.getmembers():
             if not member.isfile():continue
             if Path(member.name).parts[1] not in source_ids:continue
@@ -77,12 +77,16 @@ def main():
     p.add_argument('--scope',choices=('pilot','full'),default='pilot',help='Pilot: 6 dialogue + 4 drug sources selected by identity hash.')
     p.add_argument('--settings',nargs='+',choices=SETTINGS,default=SETTINGS)
     p.add_argument('--source-ids',nargs='+',help='Explicit small subset; overrides scope selection.')
-    p.add_argument('--initials',choices=('recorded','fresh'),default='recorded')
+    p.add_argument('--initials',choices=('recorded','fresh'),default='fresh')
+    p.add_argument('--initials-archive',type=Path,help='External shared-initial checkpoint archive for --initials recorded.')
     p.add_argument('--endpoint',help='API base URL, including /v1 for local Qwen.')
     p.add_argument('--workers',type=int)
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--prepare-only',action='store_true',help='Load real inference code and prepare files; make zero model calls.')
-    args=p.parse_args();out=args.out.resolve()
+    args=p.parse_args()
+    if args.initials=='recorded' and args.initials_archive is None:
+        p.error('--initials recorded requires --initials-archive')
+    out=args.out.resolve()
     original=read(ROOT/'provenance'/args.backbone/'config.original.json')
     for name,expected in original['code_sha256'].items():
         assert sha(ROOT/'code'/args.backbone/'frozen_code'/name)==expected,name
@@ -111,6 +115,7 @@ def main():
         'kind':'scopeform_portable_rerun','backbone':args.backbone,'model':original['model'],
         'endpoint':endpoint,'source_ids':ids,'events':original['events'],
         'selected_settings':selected,'settings':settings,'initials':args.initials,
+        'initials_archive':str(args.initials_archive.resolve()) if args.initials=='recorded' else None,
         'scope':'explicit_subset' if args.source_ids else args.scope,
         'planned_phases':len(ids)*(1+4*2*len(selected)),
         'planned_new_initial_phases':len(ids) if args.initials=='fresh' else 0,
@@ -126,7 +131,7 @@ def main():
     }
     if (out/'config.json').exists():assert read(out/'config.json')==config,'Use a different output directory for a different configuration.'
     dump(out/'config.json',config)
-    if args.initials=='recorded':initial_checkpoints(args.backbone,set(ids),out/'main/shared')
+    if args.initials=='recorded':initial_checkpoints(args.initials_archive,set(ids),out/'main/shared')
     five,run=load_five(args.backbone)
     five.ARMS=tuple(s+'__'+v for s in selected for v in ('baseline','formalization'))
     if args.prepare_only:

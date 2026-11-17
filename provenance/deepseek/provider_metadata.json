@@ -1,9 +1,0 @@
-{
-  "requested_model": "deepseek-flash",
-  "returned_models": [
-    "deepseek-flash"
-  ],
-  "system_fingerprints": [
-    "bc19ba97cbe016479903222bb1578db6"
-  ]
-}

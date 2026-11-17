@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replay a real paired clinical episode through the full runtime; no model API."""
+"""Replay an externally supplied paired episode through the runtime; no model API."""
 import argparse
 import copy
 import json
@@ -10,15 +10,17 @@ import tempfile
 from run_experiment import ROOT,load_five,read,dump
 
 p=argparse.ArgumentParser(description=__doc__)
+p.add_argument('--case',type=Path,required=True,help='External recorded case JSON with model request/response transcripts.')
+p.add_argument('--initials-archive',type=Path,required=True,help='External shared-initial checkpoint archive containing this source.')
 p.add_argument('--out',type=Path,default=ROOT/'output/recorded_replay')
 a=p.parse_args()
 def no_network(*args,**kw):raise RuntimeError('Recorded replay does not call a model API')
 socket.create_connection=no_network;socket.socket.connect=no_network
-case=read(ROOT/'examples/recorded_replay/S000384.json')
+case=read(a.case)
 five,run=load_five('deepseek')
 actor=next(json.loads(line) for line in (ROOT/'benchmark/medical_scale_v06/confirmation15_inputs_private/actors.private.jsonl').read_text().splitlines() if json.loads(line)['source_id']==case['source_id'])
 event=next(e for e in actor['events'] if e['event_id']==case['event_id'])
-with tarfile.open(ROOT/'artifacts/deepseek/shared_initials.tar.gz','r:gz') as tar:
+with tarfile.open(a.initials_archive,'r:gz') as tar:
     cp=json.load(tar.extractfile('phases/'+case['source_id']+'/initial__initial/checkpoint.private.json'))
 
 class ReplayClient:

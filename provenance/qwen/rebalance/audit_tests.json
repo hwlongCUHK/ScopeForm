@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "frozen_checkpoint_handoff_test": true,
-  "early_and_late_reader_tests": true,
-  "changed_budget_rejected": true,
-  "changed_source_mapping_rejected": true,
-  "only_scoring_wrapper_function_changed": "routing_audit",
-  "model_calls_for_tests": 0
-}

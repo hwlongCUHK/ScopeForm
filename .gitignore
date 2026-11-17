@@ -5,3 +5,27 @@ __pycache__/
 output/
 runs/
 .DS_Store
+
+# Local experiment outputs are not distributed.
+/results/
+/expected/
+/artifacts/
+/validation/
+/examples/real_case/
+/examples/recorded_replay/
+/provenance/qwen/evaluation/
+/provenance/qwen/rebalance/
+/examples/illustration/after_id_patch.json
+/examples/illustration/correct.json
+/examples/illustration/missing_frequency.json
+/examples/illustration/wrong_binding.json
+/provenance/build_inputs.json
+/provenance/deepseek/provider_metadata.json
+/provenance/deepseek/run_status.json
+/provenance/deepseek/verification.json
+/provenance/qwen/deployment_metadata.json
+/provenance/qwen/replica27_deployment.json
+/provenance/qwen/final_phase_user_stop.json
+/provenance/qwen/five_settings_input_audit.json
+/provenance/qwen/run_status.json
+/provenance/qwen/verification.json

@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "errors": {},
-  "matched_pairs": 2400,
-  "original_scoring": true,
-  "budget_includes_all_helpers": true,
-  "history_is_actual_initial_prediction_and_acquisition": true
-}

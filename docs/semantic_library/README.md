@@ -1,41 +1,29 @@
 # 可执行语义定义与角色框架
 
-本目录包含两层：[core.json](core.json) 的 12 条计算定义，以及
-[frames.json](frames.json) 的 6 个角色化语义框架。框架规定参数从哪类记录读取、
-哪些字段共同绑定，再展开为计算定义；现有记录选择器和 Z3 求解器负责绑定与判定。
-[DESIGN.md](DESIGN.md) 记录每项设计的理论依据、项目取舍及贡献边界。
+语义库包含两层：[core.json](../../code/deepseek/frozen_code/definitions/core.json) 的
+12 条计算定义，以及 [frames.json](../../code/deepseek/frozen_code/definitions/frames.json)
+的 6 个角色化语义框架。框架规定参数从哪类记录读取、哪些字段共同绑定，再展开为
+计算定义；记录选择器和 Z3 求解器负责绑定与判定。
+[DESIGN.md](DESIGN.md) 记录设计的理论依据与表示约定。
 
-2026-11-14新增[理论分类定义](error_taxonomy.json)：表示合法性、概念与角色保真、
-语境保真、逻辑与知识状态保真。每类记录判定要求、边界、示例、理论来源与本项目
-适配范围。新增实验臂在现有图上做一次同模型诊断／局部修复，详见
-[DESIGN.md的P6](DESIGN.md#p6根据语义保真义务分类并进行一次局部修复)。
-原语义定义、编译器及原实验臂没有为这次纠错实验改写。
+[理论分类定义](../../code/deepseek/frozen_code/definitions/error_taxonomy.json) 包括
+表示合法性、概念与角色保真、语境保真、逻辑与知识状态保真。每类记录判定要求、
+边界、示例及理论来源；同一模型据此诊断图并输出局部修改，详见 DESIGN.md 的 P6。
 
-库已经能执行角色约束、框架展开和求解，并提供关闭角色约束的本地对照。
-以下示例和测试都是人工语义材料。首轮真实模型接入两方法均0/8形式化成功，见
-[首轮结果](../runs/frame_library_pilot_20261113/evaluation/FINDINGS.md)。随后统一模型
-输出协议，在其中3例上两方法均3/3完成求解；最终正确命题仍与原版相同，为11/14，
-角色约束未改变绑定。协议可执行性改善，但尚未证明答案或角色机制的净收益，见
-[统一协议三例结果](../runs/frame_protocol_pilot_20261113/evaluation/FINDINGS.md)。
+以下代码链接指向 DeepSeek 冻结实现。Qwen 对应实现位于
+[code/qwen/frozen_code](../../code/qwen/frozen_code)，目录结构相同。
+本页中的数值和对象例子是构造的语义教学材料。
 
 ## 模型接入：一个表达式协议
 
-第3项的扁平节点、固定文档遍历和字面值类型推导已撤回。当前直接流程恢复下文
-嵌套op/args协议；query为`{item_id,text,expr,evidence_ids}`。框架仍按slots访问
-语义槽；原子ref直接使用实际属性名。显式布尔位置推导是更早已有的行为，继续保留。
+[run_methods.py](../../code/deepseek/frozen_code/run_methods.py) 集成 Agent 读取、
+形式化与提交流程；[frame_direct.py](../../code/deepseek/frozen_code/methods/frame_direct.py)
+提供 `solve_and_submit`。模型生成带 `evidence_ids` 的形式化查询，程序求解并执行
+保存、回读与提交。每条 query 的标签来自求解器，引用来自同一次生成。
 
-当前只修改语义库：比较参照不再被强制为recommendation；条件规范使用when、
-modality、action，与实际事实分开。详见下文“条件规范”及DESIGN.md的P5。
-
-当前运行入口为[run_frame_direct.py](../run_frame_direct.py)：读取后直接生成带
-`evidence_ids`的形式化查询，程序求解并执行保存/回读/提交。每条query的标签来自
-求解器，引用来自同一次生成；没有先输出答案再拦截的步骤，也不再调用模型续交。
-下文的`run_frame_pilot.py`是保留的上一轮独立helper接入，用于历史对照。
-同3例直接流程已实际完成，每例4次模型调用，正确12/14；详见
-[流程简化实测](../runs/frame_direct_pilot_20261113/evaluation/FINDINGS.md)。
-
-[frame_protocol.py](../methods/frame_protocol.py) 给模型展示6个框架与基本逻辑、算术
-操作，所有调用都写为 `{"op":操作名,"args":[参数]}`。不向模型展示内部模板：
+[frame_protocol.py](../../code/deepseek/frozen_code/methods/frame_protocol.py) 使用
+嵌套 `op/args` 协议：query 为 `{item_id,text,expr,evidence_ids}`。框架按 `slots`
+访问语义槽，原子 `ref` 使用实际属性名。所有调用写为 `{"op":操作名,"args":[参数]}`：
 
 ```json
 {"op":"and","args":[
@@ -45,32 +33,23 @@ modality、action，与实际事实分开。详见下文“条件规范”及DES
 ```
 
 模型输出的引用评分为 `scores: {record_id: score}`。同一引用的所有字段共享这个
-语义分；程序展开为既有选择器需要的字段索引格式。这也简化了评分方式，不只是
-改变JSON形状。`decode`将统一表达式转换成下文的内部框架格式，再走原有lower、
-共享记录选择、Z3。直接流程由程序提交，零helper、零模型续跑；历史helper实验
-另外调用一次形式化模型后继续原生agent，保留用于既往对照。
+语义分；程序展开为选择器需要的字段索引格式。`decode` 将统一表达式转换成下文
+内部框架格式，再执行 `lower`、共享记录选择与 Z3 求解。
 
-当前编译接口允许查询直接读取已明确的来源记录，例如
-`{"op":"record","args":["rule_record","threshold"]}`；需要消歧或共享绑定时用
-`ref`。两种地址可出现在同一查询中。来源rules仍使用固定record地址，来源事实
-不随查询绑定变化。缺失字段仍是未知量。
+查询可以直接读取已明确的来源记录，例如
+`{"op":"record","args":["rule_record","threshold"]}`；需要消歧或共享绑定时使用
+`ref`。两种地址可出现在同一查询中。来源 rules 使用固定 record 地址，来源事实
+不随查询绑定变化。缺失字段保持未知。
 
-查询及NOT/AND/OR等明确布尔位置可直接推导变量为Bool，漏写这类类型声明不再
-阻断整包；不补真假值，不推测不明确的数值类型。该接口修复用相同原回包重放5例，
-正确命题17/23→22/23，新增API为0，详见
-[接口修复重放](../runs/frame_record_access_typed_replay_20261113/evaluation/FINDINGS.md)。
+查询及 NOT/AND/OR 等明确布尔位置可推导变量为 Bool；这不补充真假值，也不推测
+不明确的数值类型。比较参照按原文保留 order 或 recommendation 等意图；条件规范
+使用 when、modality、action，与实际事实分开。
 
-从 `experiments/cpm_methods` 复现三例（新的运行应使用新输出目录）：
+从仓库根目录准备一个不调用模型的小批量运行：
 
 ```sh
-.venv310/bin/python -B run_frame_pilot.py --method-prefix frame_protocol \
-  --selection frame_protocol_selection.json --run-dir runs/NEW_RUN --workers 2
-.venv310/bin/python -B evaluate_frame_pilot.py --run-dir runs/NEW_RUN
+python scripts/run_experiment.py --backbone deepseek --scope pilot --out runs/demo --prepare-only
 ```
-
-提示中的完整示例已直接执行通过；新增协议测试6项、真实prefix/worker集成测试2项
-通过。它们验证接口和求解能力，不能替代真实模型的语义忠实性检查。下文展示的是
-库的内部表示，模型仅需生成上述统一协议。
 
 ## 6 个角色化框架
 
@@ -170,7 +149,7 @@ actual 记录中的 true 才表示实际完成。`event_completed` 不读取计�
 已知固定推荐 3 对应上下界均为 3；未知边界保留未知。类型检查约束字段声明，
 不能验证抽取模型是否忠实理解了原文。
 
-### 执行与最小消融
+### 执行与构造对照
 
 ```python
 from methods.frame_library import lower, solve
@@ -185,11 +164,11 @@ control = solve(graph, use_role_context=False)
 来源事实和共享选择方法都相同。角色时间/主体等指称仍由引用提供。
 改成外层否定不会改变绑定要求，查询真值不参与候选评分。
 
-从 `experiments/cpm_methods` 运行 [frame_example.json](frame_example.json)：
+从仓库根目录运行 [frame_example.json](../../code/deepseek/frozen_code/definitions/frame_example.json)：
 
 ```sh
-.venv310/bin/python -B -m methods.frame_library
-.venv310/bin/python -B -m methods.frame_library --without-role-context
+PYTHONPATH=code/deepseek/frozen_code python -B -m methods.frame_library
+PYTHONPATH=code/deepseek/frozen_code python -B -m methods.frame_library --without-role-context
 ```
 
 示例用同一批记录比较当前值、历史值、另一主体、另一模拟场景、通用推荐和检查
@@ -206,16 +185,6 @@ control = solve(graph, use_role_context=False)
 
 这里计划目标被误当实际完成的差异说明角色约束确实参与绑定，不是 benchmark 效果
 结论。原始事实没有变化；两种用量含义的区别来自 `2 × 3 = 3 × 2`，而 `2 ≠ 3`。
-
-新增框架测试与原有定义/记录/求解器测试：
-
-```sh
-.venv310/bin/python -B -m unittest tests.test_frame_library tests.test_definition_library tests.test_record_solver tests.test_scope_solver -v
-```
-
-2026-11-13 本地验证：53 项测试通过，其中 17 项为新增框架语义测试。
-9 条命题的人工多文档示例完成两组求解，两组来源事实完全一致；检查完成及其
-否定的两个标签随角色绑定改变，其余 7 个标签一致。没有调用模型或评分私有数据。
 
 ## 已准备的 12 条定义
 
@@ -300,7 +269,7 @@ control = solve(graph, use_role_context=False)
 
 ## 条件规范：与事实规则、实际事件分开
 
-原生接口仍使用嵌套 op/args，没有第3项的扁平节点或强制文档遍历。rules中，
+表达式接口使用嵌套 op/args。rules 中，
 事实关系沿用 expr；禁用、建议、医嘱、慎用和明确允许改用如下规范实例：
 
 ```json
@@ -337,12 +306,12 @@ result = scope_solver.evaluate(compiled, {})
 ```
 
 `expand_queries` 返回新图，只展开查询表达式。来源记录、规则与引用描述保持原值。
-它不把待判断命题加入事实，也不选择记录。现有实验臂尚未调用这个入口。
+它不把待判断命题加入事实，也不选择记录。Agent 的框架路径由 `frame_library` 调用定义展开。
 
-从 `experiments/cpm_methods` 运行人工例子：
+从仓库根目录运行构造例子：
 
 ```sh
-.venv310/bin/python -B -m methods.definition_library
+PYTHONPATH=code/deepseek/frozen_code python -B -m methods.definition_library
 ```
 
 `example.json` 使用虚构对象和数值。实际对象乙，每次 2 单位、每日 3 次；参照
@@ -360,8 +329,13 @@ result = scope_solver.evaluate(compiled, {})
 | 对象一致 AND 检查完成 | `refuted` | 已知第一个条件不成立 |
 | 实际单次量为 2 OR 检查完成 | `supported` | 已知第一个条件成立 |
 
-这些标签是人工语义演示，不是 benchmark 提升结果。验证命令：
+这些标签来自构造例子的定义展开。另一个完整的绑定修改与求解演示可从仓库根目录运行：
 
 ```sh
-.venv310/bin/python -B -m unittest tests.test_definition_library tests.test_record_solver tests.test_scope_solver -v
+python scripts/demo.py --backbone deepseek
+python scripts/demo.py --backbone qwen
 ```
+
+演示读取 [graph.json](../../examples/illustration/graph.json) 和
+[illustrative_diagnosis.json](../../examples/illustration/illustrative_diagnosis.json)，
+在本地生成输出，不调用模型。
